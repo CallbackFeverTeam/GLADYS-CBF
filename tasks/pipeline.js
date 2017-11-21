@@ -28,6 +28,8 @@ var cssFilesToInject = [
   'styles/leaflet/leaflet.css',
   'styles/onoffswitch.css',
   'styles/disable-hyperlinks.css',
+  'styles/box.css',
+  'styles/nav-tabs-custom.css',
 
   //Inject AdminLTE files
   'AdminLTE/bower_components/morris.js/morris.css',

@@ -15,7 +15,7 @@
                 <!-- Main content -->
                 <section class="content"  data-ng-controller="DeviceCtrl as vm">
                     
-                     <div class="nav-tabs-custom">
+                     <div class="nav-tabs-custom <%= User.skin %> <%= User.skin %>">
             <ul class="nav nav-tabs">
               <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true"><%= __('devices-control') %></a></li>
               <li><a href="#tab_2" data-toggle="tab" aria-expanded="true"><%= __('devices-list') %></a></li>
@@ -65,18 +65,18 @@
                                                     <div ng-show="type.sensor == 1">{{type.lastValue }} {{type.unit}}</div>
                                                     
                                                     <!-- If the deviceType is not a sensor and is not a binary, display input field -->
-                                                     <form class="form-inline" ng-show="!type.sensor && type.type != 'binary'"  >
-                                                         
-                                                         <div class="device-value-slider">
-                                                            <slider data-slider-id="green" ng-model="type.lastValue" min="type.min" step="1" max="type.max" value="type.lastValue" ng-model-options='{ debounce: 100 }' ng-change="vm.changeValue(type, type.lastValue);" ></slider>
-                                                          </div>
-                                                           <!--
-                                                        <div class="form-group">
-                                                            <div class="input-group">
-                                                            <input 
-                                                                type="number" class="form-control input-sm" 
-                                                                ng-model="type.lastValue" 
-                                                            />
+                                                    <form class="form-inline" ng-show="!type.sensor && type.type != 'binary'"  >
+                                                            
+                                                            <div class="device-value-slider">
+                                                               <slider data-slider-id="green" ng-model="type.lastValue" min="type.min" step="1" max="type.max" value="type.lastValue" ng-model-options='{ debounce: 100 }' ng-change="vm.changeValue(type, type.lastValue);" ></slider>
+                                                             </div>
+                                                              <!--
+                                                           <div class="form-group">
+                                                               <div class="input-group">
+                                                               <input 
+                                                                   type="number" class="form-control input-sm" 
+                                                                   ng-model="type.lastValue" 
+                                                               />
                                                          
                                                             <span class="input-group-btn">
                                                             <button class="btn btn-success  " ng-click="vm.changeValue(type, type.lastValue);" ><%= __('devices-types-changevalue') %></button> 
@@ -312,7 +312,7 @@
                                                             </div>
                                                         </div>
                                                      </form>    
-                                                    <!-- If the deviceType is not a sensor and is  a binary, display on/off button -->
+                                                    <!-- If the deviceType is not a sensor and is a binary, display on/off button -->
                                                     <button ng-show="!type.sensor && type.type == 'binary'" ng-click="vm.changeValue(type, !type.lastValue);" 
                                                             class="btn {{ type.lastValue && 'btn-danger' || 'btn-success' }}  ">
                                                             {{type.lastValue && '<%= __('devices-types-off') %>' || '<%= __('devices-types-on') %>' }}
