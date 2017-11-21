@@ -77,7 +77,7 @@ module.exports = {
 
         skin: {
             type:'string',
-            defaultsTo:'skin-blue-light box-primary'
+            defaultsTo:'skin-blue-light box-primary nav-tabs-custom-primary'
         },
 
         avatar: {
