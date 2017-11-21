@@ -34,18 +34,18 @@
                         <td><%= __('Skin') %></td>
                         <td>
                             <select class="form-control" ng-model="vm.user.skin">
-                                <option value="skin-black box-black">Black</option>
-                                <option value="skin-black-light box-black">Black light</option>
-                                <option value="skin-blue box-primary">Blue</option>
-                                <option value="skin-blue-light box-primary">Blue light</option>
-                                <option value="skin-green box-success">Green</option>
-                                <option value="skin-green-light box-success">Green light</option>
-                                <option value="skin-purple box-purple">Purple</option>
-                                <option value="skin-purple-light box-purple">Purple light</option>
-                                <option value="skin-red box-danger">Red</option>
-                                <option value="skin-red-light box-danger">Red light</option>
-                                <option value="skin-yellow box-warning">Yellow</option>
-                                <option value="skin-yellow-light box-warning">Yellow light</option>
+                                <option value="skin-black box-black" ng-selected="vm.user.skin == {{vm.user.skin}}"><%= __('skin-black') %></option>
+                                <option value="skin-black-light box-black" ng-selected="vm.user.skin == {{vm.user.skin}}"><%= __('skin-black-light') %></option>
+                                <option value="skin-blue box-primary" ng-selected="vm.user.skin == {{vm.user.skin}}"><%= __('skin-blue') %></option>
+                                <option value="skin-blue-light box-primary" ng-selected="vm.user.skin == {{vm.user.skin}}"><%= __('skin-blue-light') %></option>
+                                <option value="skin-green box-success" ng-selected="vm.user.skin == {{vm.user.skin}}"><%= __('skin-green') %></option>
+                                <option value="skin-green-light box-success" ng-selected="vm.user.skin == {{vm.user.skin}}"><%= __('skin-green-light') %></option>
+                                <option value="skin-purple box-purple" ng-selected="vm.user.skin == {{vm.user.skin}}"><%= __('skin-purple') %></option>
+                                <option value="skin-purple-light box-purple" ng-selected="vm.user.skin == {{vm.user.skin}}"><%= __('skin-purple-light') %></option>
+                                <option value="skin-red box-danger" ng-selected="vm.user.skin == {{vm.user.skin}}"><%= __('skin-red') %></option>
+                                <option value="skin-red-light box-danger" ng-selected="vm.user.skin == {{vm.user.skin}}"><%= __('skin-red-light') %></option>
+                                <option value="skin-yellow box-warning" ng-selected="vm.user.skin == {{vm.user.skin}}"><%= __('skin-yellow') %></option>
+                                <option value="skin-yellow-light box-warning" ng-selected="vm.user.skin == {{vm.user.skin}}"><%= __('skin-yellow-light') %></option>
                             </select>
                         </td>
                     </tr>
@@ -53,11 +53,11 @@
                         <td><%= __('Avatar') %></td>
                         <td>
                             <select class="form-control" ng-model="vm.user.avatar">
-                                <option value="/AdminLTE/dist/img/avatar1.png">Avatar 1</option>
-                                <option value="/AdminLTE/dist/img/avatar2.png">Avatar 2</option>
-                                <option value="/AdminLTE/dist/img/avatar3.png">Avatar 3</option>
-                                <option value="/AdminLTE/dist/img/avatar4.png">Avatar 4</option>
-                                <option value="/AdminLTE/dist/img/avatar5.png">Avatar 5</option>
+                                <option value="/AdminLTE/dist/img/avatar1.png" ng-selected="vm.user.avatar == {{vm.user.avatar}}"><%= __('avatar1') %></option>
+                                <option value="/AdminLTE/dist/img/avatar2.png" ng-selected="vm.user.avatar == {{vm.user.avatar}}"><%= __('avatar2') %></option>
+                                <option value="/AdminLTE/dist/img/avatar3.png" ng-selected="vm.user.avatar == {{vm.user.avatar}}"><%= __('avatar3') %></option>
+                                <option value="/AdminLTE/dist/img/avatar4.png" ng-selected="vm.user.avatar == {{vm.user.avatar}}"><%= __('avatar4') %></option>
+                                <option value="/AdminLTE/dist/img/avatar5.png" ng-selected="vm.user.avatar == {{vm.user.avatar}}"><%= __('avatar5') %></option>
                             </select>
                         </td>
                     </tr>
