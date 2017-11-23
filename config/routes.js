@@ -276,7 +276,10 @@ module.exports.routes = {
 
 
   // Weather
-  'get /weather': 'WeatherController.get'
+  'get /weather': 'WeatherController.get',
+
+  //Skin
+  'get /skin/:id': 'SkinController.getById',
 
 
 
