@@ -15,7 +15,7 @@
                 <!-- Main content -->
                 <section class="content"  data-ng-controller="DeviceCtrl as vm">
                     
-                     <div class="nav-tabs-custom {{yet.skins.tab}}">
+                     <div id="tab-color" class="nav-tabs-custom {{yet.skins.tab}}">
             <ul class="nav nav-tabs">
               <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true"><%= __('devices-control') %></a></li>
               <li><a href="#tab_2" data-toggle="tab" aria-expanded="true"><%= __('devices-list') %></a></li>
@@ -42,7 +42,7 @@
                     
                     <div class="col-centered col-md-4" ng-repeat="room in vm.roomDeviceTypes">
                     
-                    <div class="box {{yet.skins.box}}" >
+                    <div class="box box-color {{yet.skins.box}}" >
                         
                         <div class="box-header with-border">
                             <h3 class="box-title">{{room.name}}</h3>
