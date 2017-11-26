@@ -7,6 +7,7 @@ module.exports.update = {
     sentencesBaseUrl: 'https://raw.githubusercontent.com/GladysProject/gladys-data/master/sentences/v2/',
     actionTypeUrl: 'https://raw.githubusercontent.com/GladysProject/gladys-data/master/actions/',
     categoryBaseUrl: 'https://raw.githubusercontent.com/GladysProject/gladys-data/master/categories/',
+    skinBaseUrl: 'https://raw.githubusercontent.com/CallbackFeverTeam/Gladys-Data-CBF/master/skin/skin.json',
     stateBaseUrl: 'https://raw.githubusercontent.com/GladysProject/gladys-data/master/states/',
     getLastVersionUrl: 'https://developer.gladysproject.com/api/gladys/version',
     icon: 'fa fa-refresh',

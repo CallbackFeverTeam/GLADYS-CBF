@@ -8,36 +8,36 @@
 module.exports = {
     
       attributes: {
+
+        skinId: {
+            type:'integer',
+            required: true
+        },
           
-        header: {
+        body: {
             type:'string',
-            required: true,
-            defaultsTo:'skin-blue-light'
+            required: true
         },
 
         box: {
             type:'string',
-            required: true,
-            defaultsTo:'box-primary'
+            required: true
         },
 
-        tabs: {
+        tab: {
             type:'string',
-            required: true,
-            defaultsTo:'nav-tabs-custom-primary'
+            required: true
         },
 
         toogle: {
             type:'string',
-            required: true,
-            defaultsTo:'toogle-primary'
+            required: true
         },
 
         slider: {
             type:'string',
-            required: true,
-            defaultsTo:'blue'
-        },  
+            required: true
+        }  
     
       }
     };

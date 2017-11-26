@@ -269,6 +269,7 @@
   "installation-downloading-actions": "Téléchargement des actions de scénarios...",
   "installation-downloading-events": "Téléchargement des évènements...",
   "installation-downloading-categories": "Téléchargement des catégories...",
+  "installation-downloading-skins": "Téléchargement des skins...",
   "installation-downloading-states": "Téléchargement des conditions...",
   "installation-downloading-boxs": "Téléchargement des boxs...",
   "installation-training-brain": "Entrainement du réseau de neurones...",
@@ -468,6 +469,6 @@
   "avatar3": "Avatar 3",
   "avatar4": "Avatar 4",
   "avatar5": "Avatar 5",
-  "Save-and-refresh": "Sauvegardez et actualisez la page pour appliquer les modifications de skin et d'avatar.",
+  "Save-and-refresh": "Sauvegardez une fois les modifications de skin et d'avatar terminé.",
   "parameters-logs": "Logs"
 }

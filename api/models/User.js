@@ -75,9 +75,11 @@ module.exports = {
             required: true
         },
 
-        skin: {
+        activeSkin: {
             type:'integer',
+            required: true,
             defaultsTo:'1'
+            
         },
 
         avatar: {

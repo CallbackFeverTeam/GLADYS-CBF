@@ -73,6 +73,15 @@ module.exports = {
             .then((result) => res.json(result))
             .catch(next);
       },
+
+     /**
+      * Check for new skins
+      */
+      updateskins: function(req, res, next){
+            gladys.update.getSkins(req.session.User)
+              .then((result) => res.json(result))
+              .catch(next);
+        },
       
       /**
        * Check for new StateTypes

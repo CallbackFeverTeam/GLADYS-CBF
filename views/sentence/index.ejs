@@ -13,13 +13,13 @@
                 </section>
                 <!-- Main content -->
                 <section class="content"  data-ng-controller="SentenceCtrl as vm">
-                     <div class="nav-tabs-custom <%= User.skin %>">
+                     <div class="nav-tabs-custom {{yet.skins.tab}}">
             <ul class="nav nav-tabs">
-              <li ng-class="vm.status === false && 'active'"><a ng-click="vm.setStatus(false)" aria-expanded="true"><%= __('sentence-all') %></a></li>
-              <li ng-class="vm.status === 'pending' && 'active'"><a ng-click="vm.setStatus('pending')" aria-expanded="true"><%= __('sentence-pending') %></a></li>
-              <li ng-class="vm.status === 'approved' && 'active'"><a ng-click="vm.setStatus('approved')" aria-expanded="true"><%= __('sentence-approved') %></a></li>
-              <li ng-class="vm.status === 'official' && 'active'"><a ng-click="vm.setStatus('official')" aria-expanded="true"><%= __('sentence-official') %></a></li>
-              <li ng-class="vm.status === 'rejected' && 'active'"><a ng-click="vm.setStatus('rejected')" aria-expanded="true"><%= __('sentence-rejected') %></a></li>
+              <li ng-class="vm.status === false && 'active'"><a style="cursor:pointer" ng-click="vm.setStatus(false)" aria-expanded="true"><%= __('sentence-all') %></a></li>
+              <li ng-class="vm.status === 'pending' && 'active'"><a style="cursor:pointer" ng-click="vm.setStatus('pending')" aria-expanded="true"><%= __('sentence-pending') %></a></li>
+              <li ng-class="vm.status === 'approved' && 'active'"><a style="cursor:pointer" ng-click="vm.setStatus('approved')" aria-expanded="true"><%= __('sentence-approved') %></a></li>
+              <li ng-class="vm.status === 'official' && 'active'"><a style="cursor:pointer" ng-click="vm.setStatus('official')" aria-expanded="true"><%= __('sentence-official') %></a></li>
+              <li ng-class="vm.status === 'rejected' && 'active'"><a style="cursor:pointer" ng-click="vm.setStatus('rejected')" aria-expanded="true"><%= __('sentence-rejected') %></a></li>
 
               <li ng-hide="vm.training" class="pull-right"><a ng-click="vm.trainNew()" style="cursor:pointer"> <%= __('brain-train-new') %> </a></li>
               <li ng-show="vm.training" class="pull-right"><a ><%= __('brain-training') %>...</a></li>

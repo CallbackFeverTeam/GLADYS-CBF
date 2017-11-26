@@ -68,4 +68,14 @@ module.exports = {
           .catch(next);
     },
 
+        /**
+     * Get a skin by skinId
+     */
+
+    getBySkinId: function(req, res, next) {
+        gladys.skin.getBySkinId({id: req.params.id})
+          .then((skin) => res.json(skin))
+          .catch(next);
+    },
+
 };

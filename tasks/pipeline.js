@@ -26,7 +26,7 @@ var cssFilesToInject = [
   'styles/device.css',
   'styles/weather.css',
   'styles/leaflet/leaflet.css',
-  'styles/onoffswitch.css',
+  'styles/toogle.css',
   'styles/disable-hyperlinks.css',
   'styles/box.css',
   'styles/nav-tabs-custom.css',
@@ -138,6 +138,7 @@ var jsFilesToInject = [
    
    // loading AdminLTE app
    'AdminLTE/dist/js/adminlte.min.js',
+   'AdminLTE/dist/js/change-skin.js'
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
   //'js/**/*.js'

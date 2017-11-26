@@ -1,0 +1,63 @@
+.toogle {
+    position: relative; width: 45px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.toogle-checkbox {
+    display: none;
+}
+.toogle-label {
+    display: block; overflow: hidden; cursor: pointer;
+    height: 20px; padding: 0; line-height: 20px;
+    border: 2px solid #E3E3E3; border-radius: 20px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+.toogle-label:before {
+    content: "";
+    display: block; width: 20px; margin: 0px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 23px;
+    border: 2px solid #E3E3E3; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.toogle-checkbox.toogle-blue:checked + .toogle-label {
+    background-color: #428BCA;
+}
+.toogle-checkbox.toogle-red:checked + .toogle-label {
+    background-color: #dd4b39;
+}
+.toogle-checkbox.toogle-yellow:checked + .toogle-label {
+    background-color: #f39c12;
+}
+.toogle-checkbox.toogle-green:checked + .toogle-label {
+    background-color: #00a65a;
+}
+.toogle-checkbox.toogle-black:checked + .toogle-label {
+    background-color: #000000;
+}
+.toogle-checkbox.toogle-purple:checked + .toogle-label {
+    background-color: #605ca8;
+}
+
+.toogle-checkbox.toogle-blue:checked + .toogle-label, .toogle-checkbox:checked + .toogle-label:before {
+    border-color: #428BCA;
+}
+.toogle-checkbox.toogle-red:checked + .toogle-label, .toogle-checkbox:checked + .toogle-label:before {
+    border-color: #dd4b39;
+ }
+ .toogle-checkbox.toogle-yellow:checked + .toogle-label, .toogle-checkbox:checked + .toogle-label:before {
+    border-color: #f39c12;
+ }
+ .toogle-checkbox.toogle-green:checked + .toogle-label, .toogle-checkbox:checked + .toogle-label:before {
+    border-color: #00a65a;
+ }
+ .toogle-checkbox.toogle-black:checked + .toogle-label, .toogle-checkbox:checked + .toogle-label:before {
+    border-color: #000000;
+ }
+ .toogle-checkbox.toogle-purple:checked + .toogle-label, .toogle-checkbox:checked + .toogle-label:before {
+    border-color: #605ca8;
+ }
+.toogle-checkbox:checked + .toogle-label:before {
+    right: 0px; 
+}

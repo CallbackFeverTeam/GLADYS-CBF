@@ -157,10 +157,11 @@
                           <p ng-show="vm.downloadStep > 3"><%= __('installation-downloading-events') %></p>
                           <p ng-show="vm.downloadStep > 2"><%= __('installation-downloading-boxs') %></p>
                           <p ng-show="vm.downloadStep > 4"><%= __('installation-downloading-categories') %></p>
-                          <p ng-show="vm.downloadStep > 5"><%= __('installation-downloading-states') %></p>
-                          <p ng-show="vm.downloadStep > 6"><%= __('installation-training-brain') %></p>
-                          <p ng-show="vm.downloadStep > 7"><%= __('installation-checking-for-updates') %></p>
-                          <p ng-show="vm.downloadStep > 7"><%= __('installation-configuration-success') %></p>
+                          <p ng-show="vm.downloadStep > 5"><%= __('installation-downloading-skins') %></p>
+                          <p ng-show="vm.downloadStep > 6"><%= __('installation-downloading-states') %></p>
+                          <p ng-show="vm.downloadStep > 7"><%= __('installation-training-brain') %></p>
+                          <p ng-show="vm.downloadStep > 8"><%= __('installation-checking-for-updates') %></p>
+                          <p ng-show="vm.downloadStep > 9"><%= __('installation-configuration-success') %></p>
                           
                           <p class="bg-danger" style="padding:15px;" ng-show="vm.downloadError">{{vm.downloadError}}</p>
                           <div class="progress active">
@@ -319,6 +320,7 @@
     <script src="/js/app/weather/weather.controller.js"></script>
     <script src="/js/app/weather/weather.service.js"></script>
     <script src="/AdminLTE/dist/js/adminlte.min.js"></script>
+    <script src="/AdminLTE/dist/js/change-skin.js"></script>
     <!--SCRIPTS END-->
 
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

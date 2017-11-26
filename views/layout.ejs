@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/styles/device.css">
     <link rel="stylesheet" href="/styles/weather.css">
     <link rel="stylesheet" href="/styles/leaflet/leaflet.css">
-    <link rel="stylesheet" href="/styles/onoffswitch.css">
+    <link rel="stylesheet" href="/styles/toogle.css">
     <link rel="stylesheet" href="/styles/disable-hyperlinks.css">
     <link rel="stylesheet" href="/styles/box.css">
     <link rel="stylesheet" href="/styles/nav-tabs-custom.css">
@@ -38,17 +38,13 @@
     
     <style>
     [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-        display: none !important;
+        display: none;
     }
     </style>
-
-     <!-- Skin Controller -->
-    <div data-ng-controller="SkinCtrl as vm" ></div>
-    <!-- End of Skin Controller -->
-
+    
   </head>
 
-  <body id="body" class="hold-transition <%= Skin.header %> sidebar-mini" ng-app="gladys"> 
+  <body id="body" data-ng-controller="SkinCtrl as yet" class="sidebar-mini {{yet.skins.body}}" ng-app="gladys" ng-cloak> 
         <div class="wrapper">
                 <header class="main-header">
                         <a href="/dashboard" class="logo">
@@ -362,6 +358,7 @@
     <script src="/js/app/weather/weather.controller.js"></script>
     <script src="/js/app/weather/weather.service.js"></script>
     <script src="/AdminLTE/dist/js/adminlte.min.js"></script>
+    <script src="/AdminLTE/dist/js/change-skin.js"></script>
     <!--SCRIPTS END-->
     
 
