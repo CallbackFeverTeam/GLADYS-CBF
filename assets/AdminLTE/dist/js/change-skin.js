@@ -39,12 +39,12 @@ function set_theme(theme) {
     $(".nav-tabs-custom").removeClass (function (index, className) {
         return (className.match (/(^|\s)nav-tabs-custom-\S+/g) || []).join(' ');
     }).addClass(theme.tab);
-    $(".toogle-checkbox").removeClass (function (index, className) {
-        return (className.match (/(^|\s)toogle-\S+/g) || []).join(' ');
-    }).addClass(theme.toogle);
-    $("#data-slider-id").removeClass (function (index, className) {
-        return (className.match (/(^|\s)data-slider-\S+/g) || []).join(' ');
-    }).addClass(theme.slider);
+    // $(".toogle-checkbox").removeClass (function (index, className) {
+    //     return (className.match (/(^|\s)toogle-\S+/g) || []).join(' ');
+    // }).addClass(theme.toogle);
+    // $("#data-slider-id").removeClass (function (index, className) {
+    //     return (className.match (/(^|\s)data-slider-\S+/g) || []).join(' ');
+    // }).addClass(theme.slider);
 
     if (supports_storage) {
         localStorage.theme = theme;
