@@ -1,7 +1,7 @@
-let supports_storage = supports_html5_storage();
+var supports_storage = supports_html5_storage();
 
 if (supports_storage) {
-    let theme = localStorage.theme;
+    var theme = localStorage.theme;
     if (theme) {
       set_theme(theme);
     }
@@ -13,9 +13,9 @@ if (supports_storage) {
 jQuery(function($)  {
     $('#theme-dropdown').change( function() {
         $(this).find(":selected").each(function () {
-            let theme_name = $(this).attr('rel').split(' ');
+            var theme_name = $(this).attr('rel').split(' ');
             // skin="skin-blue" box="box-primary" tab="nav-tabs-custom-primary" toogle="toogle-primary" slider="blue"
-            let theme = {
+            var theme = {
                 skin: theme_name[0],
                 box: theme_name[1],
                 tab: theme_name[2],
