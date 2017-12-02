@@ -22,7 +22,7 @@ var cssFilesToInject = [
   'styles/scenario.css',
   'styles/global.css',
   'styles/angular-chart/angular-chart.min.css',
-  'styles/bootstrap-slider/bootstrap-slider.min.css',
+  'AdminLTE/plugins/bootstrap-slider/slider.css',
   'styles/device.css',
   'styles/weather.css',
   'styles/leaflet/leaflet.css',
@@ -43,6 +43,7 @@ var cssFilesToInject = [
   'AdminLTE/dist/css/skins/_all-skins.min.css',
   'AdminLTE/bower_components/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
   'AdminLTE/plugins/iCheck/minimal/_all.css',
+  'AdminLTE/bower_components/fullcalendar/dist/fullcalendar.min.css',
   
   // all styles, disabled by default
   //'styles/**/*.css',
@@ -78,7 +79,7 @@ var jsFilesToInject = [
   'AdminLTE/bower_components/moment/min/moment.min.js',
   
   // loading Chart JS
-  'js/dependencies/chart.min.js',
+  'AdminLTE/bower_components/chart.js/chart.min.js',
   
   // loading ace
   'js/dependencies/ace/ace.js',
@@ -99,7 +100,7 @@ var jsFilesToInject = [
   
   'AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js',
 
-  'js/dependencies/bootstrap-slider.min.js',
+  'AdminLTE/plugins/bootstrap-slider/bootstrap-slider.js',
 
   'js/dependencies/leaflet.js',
 
@@ -138,7 +139,9 @@ var jsFilesToInject = [
    
    // loading AdminLTE app
    'AdminLTE/dist/js/adminlte.min.js',
-   'AdminLTE/dist/js/change-skin.js'
+   'AdminLTE/dist/js/change-skin.js',
+   'AdminLTE/bower_components/fullcalendar/dist/fullcalendar.min.js',
+   'AdminLTE/bower_components/fullcalendar/dist/locale-all.js',
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
   //'js/**/*.js'

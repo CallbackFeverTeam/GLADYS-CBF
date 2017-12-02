@@ -1,6 +1,6 @@
 <div data-ng-controller="UserCtrl as vm">
 <!-- NEW BOX -->
-<div class="box box-color {{yet.skins.box}}" >
+<div class="box skin-box {{yet.skins.box}}" >
     <div class="box-header with-border">
         <h3 class="box-title"><%= __('user-box-title') %> <small class="ng-cloak" ng-show="vm.saving"><%= __('user-box-saving') %></small></h3>
     </div> 
@@ -69,7 +69,7 @@
 </div>
 
 <div class="ng-cloak">
-<div class="box box-color {{yet.skins.box}}" ng-if="vm.user.role === 'admin'">
+<div class="box skin-box {{yet.skins.box}}" ng-if="vm.user.role === 'admin'">
     <div class="box-header with-border">
         <h3 class="box-title"><%= __('all-user-box-title') %> <small class="ng-cloak" ng-show="vm.saving"><%= __('user-box-saving') %></small></h3>
     </div> 

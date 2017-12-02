@@ -33,7 +33,7 @@ function set_theme(theme) {
     $("#body").removeClass (function (index, className) {
         return (className.match (/(^|\s)skin-\S+/g) || []).join(' ');
     }).addClass(theme.skin);
-    $(".box").removeClass (function (index, className) {
+    $(".skin-box").removeClass (function (index, className) {
         return (className.match (/(^|\s)box-\S+/g) || []).join(' ');
     }).addClass(theme.box);
     $(".nav-tabs-custom").removeClass (function (index, className) {
