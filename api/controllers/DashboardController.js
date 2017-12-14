@@ -56,6 +56,10 @@ module.exports = {
 
   sentence(req, res, next) {
     res.view('sentence/index', {User: req.session.User, pageName: req.__('pagename-sentence')});
+  },
+
+  calendar(req, res, next) {
+    res.view('calendar/index', {User: req.session.User, pageName: req.__('pagename-calendar')});
   }
 
 };

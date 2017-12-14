@@ -48,6 +48,11 @@ module.exports = {
         calendar: {
             model: 'Calendar',
             required: true
+        },
+
+        color: {
+            type: 'string',
+            defaultsTo: 'rgb(0, 115, 183)'
         }
 
     }

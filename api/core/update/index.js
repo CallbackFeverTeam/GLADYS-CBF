@@ -9,3 +9,4 @@ module.exports.getModes = require('./update.getModes.js');
 module.exports.getStates = require('./update.getStates.js');
 module.exports.getSentences = require('./update.getSentences.js');
 module.exports.getSkins = require('./update.getSkins.js');
+module.exports.getDraggableEvents = require('./update.getDraggableEvents.js');

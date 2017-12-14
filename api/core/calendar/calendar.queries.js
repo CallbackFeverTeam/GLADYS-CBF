@@ -2,6 +2,7 @@ module.exports = {
     
     getCalendarByExternalId: 'SELECT * FROM calendar WHERE externalid = ?;',
     getByService: 'SELECT * FROM calendar WHERE service = ?;',
+    getByServiceAndUser: 'SELECT * FROM calendar WHERE service = ? and user = ?;',
     getCalendarEventByExternalId: 'SELECT * FROM calendarevent WHERE externalid = ?;',
     authorizationCalendar: `SELECT * FROM calendar WHERE id = ? and user = ?;`,
     authorizationCalendarEvent: `
@@ -13,6 +14,7 @@ module.exports = {
     deleteCalendar: 'DELETE FROM calendar WHERE id = ?;',
     deleteEventFromCalendar: 'DELETE FROM calendarevent WHERE calendar = ?;',
     deleteEvent: `DELETE FROM calendarevent WHERE id = ?;`,
+    deleteDraggableEvent: `DELETE FROM calendardraggableevents WHERE id = ?;`,
     
     getCalendars: `SELECT * FROM calendar WHERE user = ? LIMIT ? OFFSET ?;`,
 
@@ -60,8 +62,20 @@ module.exports = {
 		AND calendar.active = 1 
 		ORDER BY start;
     `,
+
+    getAllEvents: `
+        SELECT calendarevent.*
+        FROM calendarevent
+        INNER JOIN calendar ON(calendarevent.calendar = calendar.id)
+        WHERE user = ?
+        AND calendar.active = 1 
+        ORDER BY start;
+    `,
+    
     getAllCalendarService: 
     `
         SELECT DISTINCT service FROM calendar;
-    `
+    `,
+
+    getDraggableEventsByUser: 'SELECT * FROM calendardraggableevents WHERE user = ?;',
 };

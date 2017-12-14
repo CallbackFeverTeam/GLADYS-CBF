@@ -28,6 +28,7 @@
             updateSentences: updateSentences,
             updateCategories: updateCategories,
             updateSkins: updateSkins,
+            updateDraggableEvents: updateDraggableEvents,
             updateStates: updateStates
         };
 
@@ -67,6 +68,10 @@
         
         function updateSkins(){
             return $http({method: 'GET', url: '/update/skin'});
+        }
+
+        function updateDraggableEvents(){
+            return $http({method: 'GET', url: '/update/draggableEvents'});
         }
         
         function updateStates(){

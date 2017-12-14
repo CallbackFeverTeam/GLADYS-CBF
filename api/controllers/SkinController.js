@@ -68,7 +68,7 @@ module.exports = {
           .catch(next);
     },
 
-        /**
+    /**
      * Get a skin by skinId
      */
 

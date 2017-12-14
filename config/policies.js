@@ -34,6 +34,8 @@ module.exports.policies = {
   Brain: [ 'checkToken'],
   Box: [ 'authenticated'],
   BoxType: [ 'authenticated'],
+  Calendar : ['checkToken'],
+  CalendarDraggableEvents : ['checkToken'],
   CalendarEvent : ['checkToken'],
   CalendarList : ['checkToken'],
   Category: ['checkToken'],

@@ -106,6 +106,11 @@
             })
             .then(function(){
                 
+                // get all Skins
+                return updateService.updateSkins();
+            })
+            .then(function(){
+                
                 // get all states
                 return updateService.updateStates();
             })

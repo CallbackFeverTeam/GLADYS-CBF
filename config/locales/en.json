@@ -26,6 +26,7 @@
   "pagename-module": "Modules",
   "pagename-device": "Device",
   "pagename-sentence": "Brain",
+  "pagename-calendar": "Calendar",
   "dashboard-default-box-title": "Welcome in Gladys !",
   "dashboard-default-box-text": "You are on the dashboard of Gladys. To add boxs on this dashboard, go to \"Parameters\" then \"Boxs\".",
   "modules-installed": "Installed Modules",
@@ -304,5 +305,11 @@
   "avatar4": "Avatar 4",
   "avatar5": "Avatar 5",
   "Save-and-refresh": "Save skin and avatar changes once.",
-  "parameters-logs": "Logs"
+  "parameters-logs": "Logs",
+  "Calendar": "Calendar",
+  "Add": "Add",
+  "Title": "Title",
+  "Create-event": "Create event",
+  "Events-available": "Events available",
+  "Drag-here-to-delete":"Drag here to delete"
 }

@@ -78,9 +78,22 @@ module.exports.routes = {
   // Brain
   'get /brain/classify': 'BrainController.classify', 
   'post /brain/trainnew': 'BrainController.trainNew', 
-  
+
+  // Calendar
+  'get /calendar/service': 'CalendarController.getByServiceAndUser',
+  'post /calendar': 'CalendarController.create',
+
+  // CalendarDraggableEvent
+  'get /calendarevent/draggable': 'CalendarDraggableEventsController.getDraggableEventByUser',
+  'post /calendarevent/draggable': 'CalendarDraggableEventsController.createDraggableEvent',
+  'delete /calendarevent/draggable/:id': 'CalendarDraggableEventsController.deleteDraggableEvent',
+
   // CalendarEvent
   'get /calendarevent' : 'CalendarEventController.index',
+  'get /calendarevent/all' : 'CalendarEventController.get',
+  'post /calendarevent/create' : 'CalendarEventController.create',
+  'patch /calendarevent/update/:id' : 'CalendarEventController.update',
+  'delete /calendarevent/delete/:id' : 'CalendarEventController.delete',
   
   //Category
   'get /category': 'CategoryController.index',
@@ -264,6 +277,7 @@ module.exports.routes = {
   'get /update/box': 'UpdateController.updateBoxTypes',
   'get /update/category': 'UpdateController.updateCategories',
   'get /update/skin': 'UpdateController.updateSkins',
+  'get /update/draggableEvents': 'UpdateController.updateDraggableEvents',
   'get /update/state': 'UpdateController.updateStates',
   
   //User
