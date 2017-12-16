@@ -87,7 +87,7 @@
         
         vm.downloadStep = 1;
         vm.downloadProgress = 0;
-        var nbSteps = 11;
+        var nbSteps = 12;
         
         // get all modes
         updateService.updateModes()
@@ -141,14 +141,18 @@
             return updateService.updateSkins();
           })
           .then(function(){
+            vm.downloadStep++;
+            vm.downloadProgress += 100/nbSteps;
+            // get all Draggables Events
+            return updateService.updateDraggableEvents();
+          })
+          .then(function(){
               vm.downloadStep++;
               vm.downloadProgress += 100/nbSteps;
-              
               // get all statesTypes
               return updateService.updateStates();
           })
           .then(function(){
-              
               vm.downloadStep++;
               vm.downloadProgress += 100/nbSteps;
               // train brain

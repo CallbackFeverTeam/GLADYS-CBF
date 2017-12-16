@@ -18,10 +18,27 @@
 
     function calendarService($http) {
         var service = {
-            loadEvents: loadEvents
+            getCalendarByServiceAndUser: getCalendarByServiceAndUser,
+            createCalendar: createCalendar,
+            loadEvents: loadEvents,
+            loadAllEvents: loadAllEvents,
+            createEvent: createEvent,
+            updateEvent: updateEvent,
+            deleteEvent: deleteEvent,
+            loadDraggableEvents: loadDraggableEvents,
+            deleteDraggableEvent: deleteDraggableEvent,
+            createDraggableEvent: createDraggableEvent
         };
 
         return service;
+
+        function getCalendarByServiceAndUser(service, user) {
+            return $http({method: 'GET', url: '/calendar/service/', params: {service: service, user: user} });
+        }
+
+        function createCalendar(calendar){
+            return $http({method: 'POST', url: '/calendar', data: calendar });
+        }
 
         function loadEvents(date) {
             var start = new Date(date);
@@ -36,6 +53,34 @@
 
 
             return $http({method: 'GET', url: '/calendarevent', params: {start: start, end: end} });
+        }
+
+        function loadAllEvents() {
+            return $http({method: 'GET', url: '/calendarevent/all'});
+        }
+
+        function createEvent(event) {
+            return $http({method: 'POST', url: '/calendarevent/create', data: event });
+        }
+
+        function updateEvent(event) {
+            return $http({method: 'PATCH', url: '/calendarevent/update/' + event.id, data: event});
+        }
+
+        function deleteEvent(id){
+            return $http({method: 'DELETE', url: '/calendarevent/delete/' + id });
+        }
+
+        function createDraggableEvent(event) {
+            return $http({method: 'POST', url: '/calendarevent/draggable/', data: event });
+        }
+
+        function loadDraggableEvents() {
+            return $http({method: 'GET', url: '/calendarevent/draggable'});
+        }
+
+        function deleteDraggableEvent(id){
+            return $http({method: 'DELETE', url: '/calendarevent/draggable/' + id });
         }
         
     }

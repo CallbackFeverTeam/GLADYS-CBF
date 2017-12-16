@@ -9,6 +9,7 @@ module.exports.update = {
     actionTypeUrl: 'https://raw.githubusercontent.com/CallbackFeverTeam/Gladys-Data-CBF/master/actions/',
     categoryBaseUrl: 'https://raw.githubusercontent.com/CallbackFeverTeam/Gladys-Data-CBF/master/categories/',
     skinBaseUrl: 'https://raw.githubusercontent.com/CallbackFeverTeam/Gladys-Data-CBF/master/skin/skin.json',
+    draggableEventsBaseUrl: 'https://raw.githubusercontent.com/CallbackFeverTeam/Gladys-Data-CBF/master/draggable-events/',
     stateBaseUrl: 'https://raw.githubusercontent.com/CallbackFeverTeam/Gladys-Data-CBF/master/states/',
     getLastVersionUrl: 'https://developer.gladysproject.com/api/gladys/version',
     icon: 'fa fa-refresh',

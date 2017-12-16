@@ -15,7 +15,7 @@
     <!-- Main content -->
     <section class="content">
         
-        <div class="nav-tabs-custom {{ yet.skins.tab }}">
+        <div class="nav-tabs-custom <%= req.session.Skin.tab%>">
             <ul class="nav nav-tabs">
             <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true"><%= __('parameters-general') %></a></li>
             <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false"><%= __('parameters-house') %></a></li>

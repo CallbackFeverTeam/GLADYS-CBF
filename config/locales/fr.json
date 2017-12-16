@@ -191,6 +191,7 @@
   "pagename-module": "Modules",
   "pagename-device": "Device",
   "pagename-sentence": "Cerveau",
+  "pagename-calendar": "Calendrier",
   "dashboard-default-box-title": "Bienvenue dans Gladys !",
   "dashboard-default-box-text": "Vous êtes sur le dashboard principal de Gladys, c'est ici que sont regroupées les informations importantes. Pour ajouter des boxs sur ce dashboard, vous pouvez aller dans \"Paramètres\" puis \"Boxs\".",
   "modules-installed": "Modules installés",
@@ -470,5 +471,10 @@
   "avatar4": "Avatar 4",
   "avatar5": "Avatar 5",
   "Save-and-refresh": "Sauvegardez une fois les modifications de skin et d'avatar terminé.",
-  "parameters-logs": "Logs"
+  "parameters-logs": "Logs",
+  "Add": "Ajouter",
+  "Title": "Titre",
+  "Create-event": "Créer un événement",
+  "Events-available": "Evénements disponible",
+  "Drag-here-to-delete":"Glisser ici pour supprimer"
 }

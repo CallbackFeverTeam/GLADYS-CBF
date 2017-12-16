@@ -84,7 +84,15 @@ module.exports = {
    login: function(req, res, next){
        gladys.user.login(req.body)
          .then(function(user){
-           
+
+          req.session.Skin = {
+            body: 'skin-blue',
+            box: 'box-primary',
+            tab: 'nav-tabs-custom-primary',
+            toogle: 'toogle-blue',
+            slider: 'blue'
+          }
+
            // user is logged in
            req.session.User = user;
            req.session.authenticated = true;
@@ -111,13 +119,21 @@ module.exports = {
           return res.forbidden('You cannot modify another user than you.');
        }
 
+       if(req.body.activeSkin != req.session.User.activeSkin){
+        gladys.skin.getBySkinId(req.body.activeSkin)
+        .then(function(skin) {
+          req.session.Skin = skin
+        })
+        .catch(next);
+        }
+
        req.body.id = req.params.id;
        gladys.user.update(req.body)
          .then(function(user){
 
-             if(req.params.id == req.session.User.id){
-                req.session.User = user;
-             }
+          if(req.params.id == req.session.User.id){
+            req.session.User = user;
+          }
 
              return res.json(user);
          })

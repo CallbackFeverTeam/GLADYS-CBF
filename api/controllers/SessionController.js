@@ -45,11 +45,15 @@ module.exports = {
 
 			// If no user is found...
 			if (!user) {
-				
-
 				req.flash('error', req.__('login-error-invalid-email'));
 				return res.redirect('/login');
 			}
+
+			gladys.skin.getBySkinId(user.activeSkin)
+			.then((skin) => {
+				req.session.Skin = JSON.parse(JSON.stringify(skin))
+			  })
+			.catch(next);
 
 
 			// Compare password from the form params to the encrypted password of the user found.

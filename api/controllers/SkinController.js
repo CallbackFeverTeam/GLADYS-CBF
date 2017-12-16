@@ -8,17 +8,19 @@
   */
   
 module.exports = {
-    
+
     /**
-     * Get all Skins
+     * Get skins user
      */
-    index: function(req, res, next) {
-        req.query.skin = req.session.Skin;
-        gladys.skin.get(req.query)
-            .then(function(skins) {
-                return res.json(skins);
-            })
-            .catch(next);
+    getSkinUser: function(req, res, next) {
+        var skin = {
+            body: req.session.Skin.body,
+            box: req.session.Skin.box, 
+            tab: req.session.Skin.tab,
+            toogle: req.session.Skin.toogle,
+            slider: req.session.Skin.slider
+        }
+        res.json(skin);
     },
 
     /**
@@ -37,7 +39,6 @@ module.exports = {
      * Update a skin
      */
     update: function(req, res, next) {
-        req.body.id = req.params.id;
         gladys.skin.update(req.body)
             .then(function(skin) {
                 return res.json(skin);
@@ -49,9 +50,7 @@ module.exports = {
      * Delete a skin
      */
     delete: function(req, res, next) {
-        gladys.skin.delete({
-                id: req.params.id
-            })
+        gladys.skin.delete({id: req.params.id})
             .then(function(skin) {
                 return res.json(skin);
             })
@@ -68,12 +67,12 @@ module.exports = {
           .catch(next);
     },
 
-        /**
+    /**
      * Get a skin by skinId
      */
 
     getBySkinId: function(req, res, next) {
-        gladys.skin.getBySkinId({id: req.params.id})
+        gladys.skin.getBySkinId(req.params.id)
           .then((skin) => res.json(skin))
           .catch(next);
     },

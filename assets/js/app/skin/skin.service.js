@@ -20,13 +20,18 @@
     function skinService($http) {
         
         var service = {
-            get: get 
+            get: get,
+            getBySkinId: getBySkinId 
         };
 
         return service;
 
-        function get(id){
+        function getBySkinId(id){
             return $http({method: 'GET', url: '/skin/' + id});
+        }
+
+        function get(){
+            return $http({method: 'GET', url: '/skin'});
         }
         
     }

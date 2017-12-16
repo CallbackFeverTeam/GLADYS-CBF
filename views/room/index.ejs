@@ -17,7 +17,7 @@
                     
                     
                       <!-- NEW BOX -->
-                  <div class="box skin-box {{yet.skins.box}}">
+                  <div class="box skin-box <%= req.session.Skin.box%>">
                   <div class="box-header with-border">
                     <h3 class="box-title"><%= __('User House Relations') %></h3>
                   </div>  
@@ -64,7 +64,7 @@
 
                         
                       <!-- NEW BOX -->
-                  <div class="box skin-box {{yet.skins.box}}">
+                  <div class="box skin-box <%= req.session.Skin.box%>">
                   <div class="box-header with-border">
                     <h3 class="box-title"><%= __('Define user\'s sleep room') %></h3>
                   </div>  
