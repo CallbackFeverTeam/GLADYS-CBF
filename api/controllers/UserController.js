@@ -84,7 +84,15 @@ module.exports = {
    login: function(req, res, next){
        gladys.user.login(req.body)
          .then(function(user){
-           
+
+          req.session.Skin = {
+            body: 'skin-blue',
+            box: 'box-primary',
+            tab: 'nav-tabs-custom-primary',
+            toogle: 'toogle-blue',
+            slider: 'blue'
+          }
+
            // user is logged in
            req.session.User = user;
            req.session.authenticated = true;
