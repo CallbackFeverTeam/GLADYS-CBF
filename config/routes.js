@@ -295,6 +295,7 @@ module.exports.routes = {
 
   //Skin
   'get /skin/:id': 'SkinController.getBySkinId',
+  'get /skin': 'SkinController.getSkinUser',
 
 
 

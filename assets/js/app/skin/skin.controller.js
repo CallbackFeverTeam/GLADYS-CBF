@@ -17,33 +17,38 @@
      SkinCtrl.$inject = ['skinService', 'userService'];
  
      function SkinCtrl(skinService, userService) {
-         /* jshint validthis: true */
+
          var vm = this;
-         vm.getSkins = getSkins;
+         vm.changeSkin = changeSkin;
  
          vm.skins = []
-         vm.users = [];
- 
+            
          activate();
- 
+          
          function activate() {
-             getUsers();
+            skinService.get()
+            .then(function(data){
+                vm.skins = data.data;
+            });
              return; 
          }
 
-         function getUsers(){
-            userService.get()
-               .then(function(data){
-                 vm.users = data.data;
-                 getSkins(vm.users);
-               });
-          }
-         
-         function getSkins(user) {
-             return skinService.get(user[0].activeSkin)
-                 .then(function(data){
-                     vm.skins = data.data;
-                 });
+         function changeSkin(){
+            var id = $("#skin-dropdown").val()
+             skinService.getBySkinId(id)
+             .then(function(newSkin){
+
+                 $("#body").removeClass (function (index, className) {
+                    return (className.match (/(^|\s)skin-\S+/g) || []).join(' ');
+                }).addClass(newSkin.data.body);
+                $(".skin-box").removeClass (function (index, className) {
+                    return (className.match (/(^|\s)box-\S+/g) || []).join(' ');
+                }).addClass(newSkin.data.box);
+                $(".nav-tabs-custom").removeClass (function (index, className) {
+                    return (className.match (/(^|\s)nav-tabs-custom-\S+/g) || []).join(' ');
+                }).addClass(newSkin.data.tab);
+
+             })
          }
          
      }

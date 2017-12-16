@@ -139,7 +139,6 @@ var jsFilesToInject = [
    
    // loading AdminLTE app
    'AdminLTE/dist/js/adminlte.min.js',
-   'AdminLTE/dist/js/change-skin.js',
    'AdminLTE/bower_components/fullcalendar/dist/fullcalendar.min.js',
    'AdminLTE/bower_components/fullcalendar/dist/locale-all.js',
   // All of the rest of your client-side js files

@@ -60,10 +60,10 @@
 
     function getCalendar(user){
       calendarService.getCalendarByServiceAndUser("gladys", user.id)
-      .then((data) => {
+      .then(function(data){
         vm.calendar = data.data
       })
-      .catch((err) => {
+      .catch(function(err){
         makeid()
 
         var calendar = {
@@ -74,7 +74,7 @@
         }
 
         calendarService.createCalendar(calendar)
-        .then((data) => {
+        .then(function(data){
           vm.calendar = data.data[0]
         })
       })
@@ -118,7 +118,7 @@
           }
 
           calendarService.createEvent(event)
-          .then((data) => {
+          .then(function(data){
             copiedEventObject.externalid      = data.data.externalid
             copiedEventObject.id              = data.data.id
             copiedEventObject.start           = eventDate

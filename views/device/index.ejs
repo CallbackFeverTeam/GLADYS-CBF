@@ -15,7 +15,7 @@
                 <!-- Main content -->
                 <section class="content"  data-ng-controller="DeviceCtrl as vm">
                     
-                     <div id="tab-color" class="nav-tabs-custom {{yet.skins.tab}}">
+                     <div id="tab-color" class="nav-tabs-custom <%= req.session.Skin.tab%>">
             <ul class="nav nav-tabs">
               <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true"><%= __('devices-control') %></a></li>
               <li><a href="#tab_2" data-toggle="tab" aria-expanded="true"><%= __('devices-list') %></a></li>
@@ -42,7 +42,7 @@
                     
                     <div class="col-centered col-md-4" ng-repeat="room in vm.roomDeviceTypes">
                     
-                    <div class="box skin-box {{yet.skins.box}}" >
+                    <div class="box skin-box <%= req.session.Skin.box%>" >
                         
                         <div class="box-header with-border">
                             <h3 class="box-title">{{room.name}}</h3>
@@ -67,12 +67,12 @@
                                                     <!-- If the deviceType is not a sensor and is not a binary, display input field -->
                                                     <form class="form-inline" ng-show="!type.sensor && type.type != 'binary'"  >
 
-                                                        <slider id="{{yet.skins.slider}}" ng-model="type.lastValue" min="type.min" step="1" max="type.max" value="type.lastValue" ng-model-options='{ debounce: 100 }' ng-change="vm.changeValue(type, type.lastValue);" ></slider>
+                                                        <slider id="<%= req.session.Skin.slider%>" ng-model="type.lastValue" min="type.min" step="1" max="type.max" value="type.lastValue" ng-model-options='{ debounce: 100 }' ng-change="vm.changeValue(type, type.lastValue);" ></slider>
                                                              
                                                      </form>    
                                                     <!-- If the deviceType is not a sensor and is  a binary, display toogle -->
                                                      <div class="toogle" ng-click="vm.changeValue(type, !type.lastValue);">
-                                                            <input type="checkbox" ng-show="!type.sensor && type.type == 'binary'" ng-model="type.lastValue" ng-true-value="1" ng-false-value="0" class="toogle-checkbox {{yet.skins.toogle}}" />
+                                                            <input type="checkbox" ng-show="!type.sensor && type.type == 'binary'" ng-model="type.lastValue" ng-true-value="1" ng-false-value="0" class="toogle-checkbox <%= req.session.Skin.toogle%>" />
                                                             <label class="toogle-label" for="mytoogle" ng-show="!type.sensor && type.type == 'binary'"></label>
                                                      </div>
                                                 </td>
