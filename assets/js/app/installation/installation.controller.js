@@ -87,7 +87,7 @@
         
         vm.downloadStep = 1;
         vm.downloadProgress = 0;
-        var nbSteps = 10;
+        var nbSteps = 11;
         
         // get all modes
         updateService.updateModes()
@@ -133,6 +133,12 @@
               vm.downloadProgress += 100/nbSteps;
               // get all Categories
               return updateService.updateCategories();
+          })
+          .then(function(){
+            vm.downloadStep++;
+            vm.downloadProgress += 100/nbSteps;
+            // get all Skins
+            return updateService.updateSkins();
           })
           .then(function(){
               vm.downloadStep++;

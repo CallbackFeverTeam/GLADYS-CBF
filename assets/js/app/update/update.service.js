@@ -27,6 +27,7 @@
             updateBoxTypes: updateBoxTypes,
             updateSentences: updateSentences,
             updateCategories: updateCategories,
+            updateSkins: updateSkins,
             updateStates: updateStates
         };
 
@@ -62,6 +63,10 @@
         
         function updateCategories(){
             return $http({method: 'GET', url: '/update/category'});
+        }
+        
+        function updateSkins(){
+            return $http({method: 'GET', url: '/update/skin'});
         }
         
         function updateStates(){

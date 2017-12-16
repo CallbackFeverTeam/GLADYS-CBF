@@ -75,9 +75,11 @@ module.exports = {
             required: true
         },
 
-        skin: {
-            type:'string',
-            defaultsTo:'skin-blue-light box-primary nav-tabs-custom-primary'
+        activeSkin: {
+            type:'integer',
+            required: true,
+            defaultsTo:'1'
+            
         },
 
         avatar: {

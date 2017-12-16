@@ -15,7 +15,7 @@
     <!-- Main content -->
     <section class="content"  data-ng-controller="ModuleCtrl as vm">
           
-          <div class="nav-tabs-custom <%= User.skin %>">
+          <div id="tab-color" class="nav-tabs-custom {{yet.skins.tab}}">
             <ul class="nav nav-tabs">
               <li class="active"><a href="#tab_1" data-toggle="tab" ng-click="vm.refreshModule();" aria-expanded="true"><%= __('modules-installed') %></a></li>
               <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false" ng-click="vm.getModulesStore();"><%= __('modules-store') %></a></li>

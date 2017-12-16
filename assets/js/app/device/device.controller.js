@@ -49,7 +49,7 @@
     activate();
 
     function activate() {
-        
+
       // get deviceType first
       getDeviceTypesByRoom()
         .then(function(){

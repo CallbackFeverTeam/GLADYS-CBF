@@ -104,6 +104,7 @@ module.exports.policies = {
     installation: ['signupAllowed']
   },
   Weather : ['checkToken'],
+  Skin : ['checkToken'],
 
 
   /***************************************************************************

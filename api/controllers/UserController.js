@@ -163,7 +163,7 @@ module.exports = {
       preparationTimeAfterWakeUp: req.session.User.preparationTimeAfterWakeUp,
       role: req.session.User.role,
       id: req.session.User.id,
-      skin: req.session.User.skin,
+      activeSkin: req.session.User.activeSkin,
       avatar: req.session.User.avatar
     };
     res.json(user);

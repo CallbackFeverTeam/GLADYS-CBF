@@ -16,7 +16,7 @@
 
     languageService.$inject = ['userService','amMoment', '$translate'];
 
-    function languageService(userService,amMoment, $translate) {
+    function languageService(userService, amMoment, $translate) {
         
         var service = {
             initialize:initialize

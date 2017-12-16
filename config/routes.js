@@ -263,6 +263,7 @@ module.exports.routes = {
   'get /update/sentence': 'UpdateController.updateSentences',
   'get /update/box': 'UpdateController.updateBoxTypes',
   'get /update/category': 'UpdateController.updateCategories',
+  'get /update/skin': 'UpdateController.updateSkins',
   'get /update/state': 'UpdateController.updateStates',
   
   //User
@@ -276,7 +277,10 @@ module.exports.routes = {
 
 
   // Weather
-  'get /weather': 'WeatherController.get'
+  'get /weather': 'WeatherController.get',
+
+  //Skin
+  'get /skin/:id': 'SkinController.getBySkinId',
 
 
 

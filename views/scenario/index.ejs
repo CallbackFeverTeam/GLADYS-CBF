@@ -15,7 +15,7 @@
 <!-- Main content -->
 <section class="content" data-ng-controller="scenarioCtrl as vm" >
     <div class="box-body" >
-         <div class="nav-tabs-custom <%= User.skin %>">
+         <div id="tab-color" class="nav-tabs-custom {{yet.skins.tab}}">
             <ul class="nav nav-tabs">
               <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true"><%= __('scenario-list') %></a></li>
               <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false"><%= __('scenario-help') %></a></li>
@@ -37,7 +37,7 @@
             </div>
             <!-- end of tab-content -->
          </div>
-         <!-- end of nav-tabs-custom <%= User.skin %> -->
+         <!-- end of nav-tabs-custom {{vm.skins.tab}} -->
     </div>
          <%- partial ('./modal.ejs') %>
          <%- partial ('./edit-scenario.ejs') %>

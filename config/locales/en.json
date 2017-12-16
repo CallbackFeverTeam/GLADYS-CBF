@@ -105,6 +105,7 @@
   "installation-downloading-events": "Downloading events...",
   "installation-downloading-boxs": "Downloading boxs...",
   "installation-downloading-categories": "Downloading categories...",
+  "installation-downloading-skins": "Downloading skins...",
   "installation-downloading-states": "Downloading conditions...",
   "installation-training-brain": "Training neural network...",
   "installation-checking-for-updates": "Checking for updates...",
@@ -208,7 +209,7 @@
   "system-restart": "Restart Gladys (pm2 needed)",
   "system-restart-button": "Restart",
   "system-update": "Update Gladys",
-   "system-update-sentence": "To update Gladys, start the script :",
+  "system-update-sentence": "To update Gladys, start the script :",
   "system-update-button": "Update",
   "notification-box-title": "Notifications",
   "notification-box-description": "Here, you can organize the different ways for Gladys to communicate with you. For example, you probably want Gladys to talk to you first if you are at home, then she can try to notify you on your desktop, and finally if you are far away she can just send you a mobile notification ! You just have to organize here the different priorities of each notification service. Easy, isn't it ?",
@@ -302,6 +303,6 @@
   "avatar3": "Avatar 3",
   "avatar4": "Avatar 4",
   "avatar5": "Avatar 5",
-  "Save-and-refresh": "Save and refresh the page to apply skin and avatar changes.",
+  "Save-and-refresh": "Save skin and avatar changes once.",
   "parameters-logs": "Logs"
 }
