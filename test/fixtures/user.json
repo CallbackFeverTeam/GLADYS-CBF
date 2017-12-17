@@ -22,5 +22,17 @@
     "language":"en-US",
     "preparationTimeAfterWakeUp": 20,
     "role": "habitant"
+  },
+  {
+    "id": 3,   
+    "firstname": "Sanchez",
+    "lastname": "Julio",
+    "password" : "test1234",
+    "email": "julio.sanchez@starkindustry.com",
+    "birthdate":"02/01/1970",
+    "gender" : 0,
+    "language":"es",
+    "preparationTimeAfterWakeUp": 20,
+    "role": "habitant"
   }
 ]
