@@ -42,9 +42,9 @@
                   <td>{{module.name}}</td>
                   <td>{{module.version}}</td>
                   <td>{{module.status}}</td>
-                   <td><button class="btn btn-info  " ng-click="vm.configModule(module.slug);"><%= __('Configuration') %></button></td>
-                  <td><button class="btn btn-success  " ng-click="vm.upgradeModule($index, module);"><%= __('module-upgrade') %></button></td>
-                   <td><button class="btn btn-danger  " ng-click="vm.uninstallModule($index, module.id);"><%= __('module-uninstall') %></button></td>
+                   <td><button class="btn btn-flat btn-info  " ng-click="vm.configModule(module.slug);"><%= __('Configuration') %></button></td>
+                  <td><button class="btn btn-flat btn-success  " ng-click="vm.upgradeModule($index, module);"><%= __('module-upgrade') %></button></td>
+                   <td><button class="btn btn-flat btn-danger  " ng-click="vm.uninstallModule($index, module.id);"><%= __('module-uninstall') %></button></td>
                 </tr>
                 
               </tbody></table>
@@ -126,7 +126,7 @@
                                         <label class="sr-only" for="slug"><%= __('module-slug') %></label>
                                         <input type="text" ng-model="vm.newModule.slug" class="form-control" id="slug" placeholder="<%= __('module-slug') %>">
                                     </div>
-                                    <button type="submit" ng-click="vm.installModule(vm.newModule);" class="btn btn-success">
+                                    <button type="submit" ng-click="vm.installModule(vm.newModule);" class="btn btn-flat btn-success">
                                         
                                         <div ng-show="vm.installationStep == 0"><%= __('module-install') %></div>
                                         <div ng-show="vm.installationStep == 1"><%= __('module-install-downloading') %></div>

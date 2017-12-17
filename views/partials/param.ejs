@@ -19,12 +19,12 @@
                     <tr ng-repeat="param in vm.params" class="ng-cloak">
                         <td>{{param.name}}</td>
                         <td><input type="text" ng-model="param.value" ng-model-options='{ debounce: 500 }' ng-change="vm.updateParam(param.name, param);" class="form-control" /></td>
-                        <td><button ng-click="vm.deleteParam($index, param.name)" class= "btn btn-danger  "><%= __('param-delete') %></button></td>
+                        <td><button ng-click="vm.deleteParam($index, param.name)" class= "btn btn-flat btn-danger  "><%= __('param-delete') %></button></td>
                     </tr>
                     <tr>
                         <td><input type="text" class="form-control" ng-model="vm.newParam.name" /></td>
                         <td><input type="text" class="form-control" ng-model="vm.newParam.value" /></td>
-                        <td><button class="btn btn-success  " ng-click="vm.createParam(vm.newParam)"><%= __('param-new') %></button></td>
+                        <td><button class="btn btn-flat btn-success  " ng-click="vm.createParam(vm.newParam)"><%= __('param-new') %></button></td>
                     </tr>
                 </tbody>
             </table>
@@ -53,12 +53,12 @@
                     <tr ng-repeat="param in vm.params" class="ng-cloak">
                         <td>{{param.name}}</td>
                         <td><input type="text" ng-model="param.value" ng-model-options='{ debounce: 500 }' ng-change="vm.updateParam(param.name, param);" class="form-control" /></td>
-                        <td><button ng-click="vm.deleteParam($index, param.name)" class= "btn btn-danger  "><%= __('param-delete') %></button></td>
+                        <td><button ng-click="vm.deleteParam($index, param.name)" class= "btn btn-flat btn-danger  "><%= __('param-delete') %></button></td>
                     </tr>
                     <tr>
                         <td><input type="text" class="form-control" ng-model="vm.newParam.name" /></td>
                         <td><input type="text" class="form-control" ng-model="vm.newParam.value" /></td>
-                        <td><button class="btn btn-success  " ng-click="vm.createParam(vm.newParam)"><%= __('param-new') %></button></td>
+                        <td><button class="btn btn-flat btn-success  " ng-click="vm.createParam(vm.newParam)"><%= __('param-new') %></button></td>
                     </tr>
                 </tbody>
             </table>

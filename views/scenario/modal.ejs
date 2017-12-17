@@ -59,7 +59,7 @@
                             </div>
                             <div class="form-group">
                                   <div class="col-md-2 col-md-offset-10">
-                                    <button class="btn btn-success" ng-class="{'disabled': (vm.newLauncher.title === '' || vm.newLauncher.title === undefined) }" ng-click="vm.nextStep();"><%= __('scenario-next-step') %></button>
+                                    <button class="btn btn-flat btn-success" ng-class="{'disabled': (vm.newLauncher.title === '' || vm.newLauncher.title === undefined) }" ng-click="vm.nextStep();"><%= __('scenario-next-step') %></button>
                                   </div>
                             </div>
                     </div>
@@ -130,7 +130,7 @@
                                     
                                     <div class="form-group">
                                         <div class="col-md-2 col-md-offset-10">
-                                        <button type="submit" class="btn btn-success" ng-click="vm.nextStep();"><%= __('scenario-next-step') %></button>
+                                        <button type="submit" class="btn btn-flat btn-success" ng-click="vm.nextStep();"><%= __('scenario-next-step') %></button>
                                         </div>
                     
                                     </div>
@@ -155,7 +155,7 @@
                                             <tr ng-repeat="stateType in vm.stateTypes">
                                                 <td>{{stateType.name}}</td>
                                                 <td>{{stateType.description}}</td>
-                                                <td><button  class="btn btn-success  " ng-click="vm.addState($index, stateType)" ><%= __('scenario-state-add') %></button></td>
+                                                <td><button  class="btn btn-flat btn-success  " ng-click="vm.addState($index, stateType)" ><%= __('scenario-state-add') %></button></td>
                                             </tr>
 
                                         </tbody>
@@ -171,7 +171,7 @@
                                     </div>
                                     <div class="col-md-2">
                                              <div class="form-group">
-                                                <button type="submit" class="btn btn-success" ng-click="vm.nextStep();"><%= __('scenario-next-step') %></button>
+                                                <button type="submit" class="btn btn-flat btn-success" ng-click="vm.nextStep();"><%= __('scenario-next-step') %></button>
                                             </div>
                                     </div>
                                 </div>
@@ -223,7 +223,7 @@
                                     <!-- end of stateTemplateParams -->
                                     
                                    <div class="form-group">
-                                        <button class="pull-right scenario-delete-row btn btn-danger  " ng-click="vm.removeState($index, state.id);"><%= __('scenario-delete') %></button>
+                                        <button class="pull-right scenario-delete-row btn btn-flat btn-danger  " ng-click="vm.removeState($index, state.id);"><%= __('scenario-delete') %></button>
                                     </div>
                                     
                                    
@@ -256,7 +256,7 @@
                                             <tr ng-repeat="actionType in vm.actionTypes">
                                                 <td>{{actionType.name}}</td>
                                                 <td>{{actionType.description}}</td>
-                                                <td><button class="btn btn-success  " ng-click="vm.addAction($index, actionType)" ><%= __('scenario-action-add') %></button></td>
+                                                <td><button class="btn btn-flat btn-success  " ng-click="vm.addAction($index, actionType)" ><%= __('scenario-action-add') %></button></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -270,7 +270,7 @@
                                     </div>
                                     <div class="col-md-4">
                                              <div class="form-group">
-                                                <button type="submit" class="btn btn-success" ng-click="vm.insertAll();"><%= __('scenario-save') %></button>
+                                                <button type="submit" class="btn btn-flat btn-success" ng-click="vm.insertAll();"><%= __('scenario-save') %></button>
                                             </div>
                                     </div>
                                 </div>
@@ -297,7 +297,7 @@
                                     </div>
                                     
                                     <div class="form-group">
-                                        <button class="pull-right scenario-delete-row btn btn-danger  " ng-click="vm.removeAction($index, action.id);"><%= __('scenario-delete') %></button>
+                                        <button class="pull-right scenario-delete-row btn btn-flat btn-danger  " ng-click="vm.removeAction($index, action.id);"><%= __('scenario-delete') %></button>
                                     </div>
                                    
                                 </form>

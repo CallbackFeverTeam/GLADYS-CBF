@@ -22,11 +22,11 @@
                                 <td>{{token.name}}</td>
                                 <td>{{token.value}}</td>
                                 <td><button ng-click="vm.switchStatus($index, token.id)"class="btn {{ token.active && 'btn-success' || 'btn-danger' }}  ">{{token.active && 'On' || 'Off' }}</button></td>
-                                <td><button ng-click="vm.destroyToken($index, token.id)" class= "btn btn-danger  "><%= __('Delete') %></button></td>
+                                <td><button ng-click="vm.destroyToken($index, token.id)" class= "btn btn-flat btn-danger  "><%= __('Delete') %></button></td>
                             </tr>
                             <tr>
                                 <td><input type="text" ng-model="vm.newToken.name" class="form-control" placeholder="<%= __('Name') %>"/></td>
-                                <td><button class="btn btn-success  " ng-click="vm.createToken();"><%= __('New') %></button></td>
+                                <td><button class="btn btn-flat btn-success  " ng-click="vm.createToken();"><%= __('New') %></button></td>
                             </tr>
                         </tbody>
                     </table>
