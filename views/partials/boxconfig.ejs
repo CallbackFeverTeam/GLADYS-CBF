@@ -23,7 +23,7 @@
                                 <td>{{box.x}}</td>
                                 <td>{{box.y}}</td>
                                 <td><button ng-click="vm.switchStatus($index, token.id)"class="btn {{ box.active && 'btn-success' || 'btn-danger' }}  ">{{box.active && 'On' || 'Off' }}</button></td>
-                                <td><button ng-click="vm.destroy($index, box.id);" class= "btn btn-danger  "><%= __('Delete') %></button></td>
+                                <td><button ng-click="vm.destroy($index, box.id);" class= "btn btn-flat btn-danger  "><%= __('Delete') %></button></td>
                             </tr>
                             <tr>
                                 <td><select name="selectBoxType" id="selectBoxType" class="form-control"
@@ -35,7 +35,7 @@
                                 <td><input type="text" ng-model="vm.newBox.x"class="form-control" placeholder="x"/></td>
                                 <td><input type="text" ng-model="vm.newBox.y"class="form-control" placeholder="y"/></td>
                                 <td><input type="text" disabled ng-model="vm.newBox.active"class="form-control" value="1" /></td>
-                                <td><button class="btn btn-success  " ng-click="vm.create(vm.newBox)"><%= __('New') %></button></td>
+                                <td><button class="btn btn-flat btn-success  " ng-click="vm.create(vm.newBox)"><%= __('New') %></button></td>
                             </tr>
                         </tbody>
                     </table>

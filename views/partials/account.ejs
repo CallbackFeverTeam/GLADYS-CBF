@@ -61,7 +61,7 @@
                             </select>
                         </td>
                     </tr>
-                    <tr><td><button class="btn btn-success" ng-click="vm.updateUser(vm.user.id, vm.user);"><%= __('account-update-button') %></button></td></tr>
+                    <tr><td><button class="btn btn-flat btn-success" ng-click="vm.updateUser(vm.user.id, vm.user);"><%= __('account-update-button') %></button></td></tr>
                 </tbody>
             </table>
 
@@ -90,10 +90,10 @@
                     <tr ng-repeat="aUser in vm.users">
                         <td>{{aUser.id}}</td>
                         <td>{{aUser.firstname}} {{aUser.lastname}}</td>
-                        <td><button class="btn btn-danger" ng-click="vm.deleteUser($index, aUser.id);"><%= __('all-user-delete-button') %></button></td>
+                        <td><button class="btn btn-flat btn-danger" ng-click="vm.deleteUser($index, aUser.id);"><%= __('all-user-delete-button') %></button></td>
                     </tr>
                      <tr>
-                         <td><button class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg" ><%= __('New') %></button></td>
+                         <td><button class="btn btn-flat btn-success" data-toggle="modal" data-target=".bs-example-modal-lg" ><%= __('New') %></button></td>
                      </tr>
                 </tbody>
             </table>
@@ -212,7 +212,7 @@
                                              </div>
 
                                              <div class="form-group">
-                                                 <button class="btn btn-success pull-right" ng-click="vm.createUser(vm.newUser);"><%= __('create-user-button-create') %></button>
+                                                 <button class="btn btn-flat btn-success pull-right" ng-click="vm.createUser(vm.newUser);"><%= __('create-user-button-create') %></button>
                                              </div>
                                              
                                          </form>      

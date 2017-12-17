@@ -134,12 +134,12 @@
                                                             ng-model="device.user" ng-change="vm.updateDevice(device);">
                                                    </select>
                                                 </td>
-                                                <td><button class="btn btn-primary  " data-toggle="modal" data-target=".bs-example-modal-lg" ng-click="vm.selectDevice(device);" ><%= __('Edit') %></button></td>
-                                                <td><button class="btn btn-danger  "  ng-click="vm.deleteDevice($index, device.id);" ><%= __('Delete') %></button></td>
+                                                <td><button class="btn btn-flat btn-primary  " data-toggle="modal" data-target=".bs-example-modal-lg" ng-click="vm.selectDevice(device);" ><%= __('Edit') %></button></td>
+                                                <td><button class="btn btn-flat btn-danger  "  ng-click="vm.deleteDevice($index, device.id);" ><%= __('Delete') %></button></td>
                                             </tr>
                                             <tr>
                                                  <td></td>
-                                                 <td><input type="text" class="form-control" ng-model="vm.newDevice.name" placeholder="<%= __('device-create-name') %>" /></td>
+                                                 <td><div class="form-group"><input type="text" class="form-control" ng-model="vm.newDevice.name" placeholder="<%= __('device-create-name') %>" /></div></td>
                                                  <td><input type="text" class="form-control" ng-model="vm.newDevice.identifier" placeholder="<%= __('device-create-identifier') %>" /></td>
                                                  <td><input type="text" class="form-control" ng-model="vm.newDevice.protocol" placeholder="<%= __('device-create-protocol') %>" /></td>
                                                  <td><input type="text" class="form-control" ng-model="vm.newDevice.service"  placeholder="<%= __('device-create-service') %>"/></td>
@@ -156,7 +156,7 @@
                                                    </select>
                                                 </td>
                                                 <td></td>
-                                                 <td><button class="btn btn-success  " data-toggle="modal" data-target=".create-device-modal" ng-click="vm.createDevice(vm.newDevice);" ><%= __('device-create-button') %></button></td>
+                                                 <td><button class="btn btn-flat btn-success  " data-toggle="modal" data-target=".create-device-modal" ng-click="vm.createDevice(vm.newDevice);" ><%= __('device-create-button') %></button></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -180,8 +180,8 @@
                                                             </select>
                                 </div>
                                 <div class="form-group">
-                                     <button class="btn   btn-info" ng-click="vm.previousStates();" ><%= __('devices-skip-previous') %></button>
-                                     <button class="btn   btn-info" ng-click="vm.nextStates();" ><%= __('devices-skip-next') %></button>
+                                     <button class="btn btn-flat btn-info" ng-click="vm.previousStates();" ><%= __('devices-skip-previous') %></button>
+                                     <button class="btn btn-flat btn-info" ng-click="vm.nextStates();" ><%= __('devices-skip-next') %></button>
                                 </div>
                                 </form>
                             
@@ -289,7 +289,7 @@
                                                                 ng-model="type.lastValue" 
                                                             />
                                                             <span class="input-group-btn">
-                                                            <button class="btn btn-success  " ng-click="vm.changeValue(type, type.lastValue);" ><%= __('devices-types-changevalue') %></button> 
+                                                            <button class="btn btn-flat btn-success  " ng-click="vm.changeValue(type, type.lastValue);" ><%= __('devices-types-changevalue') %></button> 
                                                             </span>
                                                             </div>
                                                         </div>
@@ -327,7 +327,7 @@
 
                                                 <td></td>
                                                 <td></td>
-                                                <td><button class="btn   btn-success" ng-click="vm.createDeviceType(vm.newType);"><%= __('Create') %></button></td>
+                                                <td><button class="btn btn-flat btn-success" ng-click="vm.createDeviceType(vm.newType);"><%= __('Create') %></button></td>
                                             </tr>
                                         </tbody>
                                     </table>

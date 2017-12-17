@@ -37,7 +37,7 @@
                                                 <td>{{userhouserelation.houseName}}</td>
                                                 <td>{{userhouserelation.userName}}</td>
                                                 <td>{{vm.userHouseRelationTypes[userhouserelation.userhouserelationtype-1].name}}</td>
-                                                <td><button ng-click="vm.destroyRelation($index, userhouserelation.id)" class= "btn btn-danger  "><%= __('Delete') %></button></td>
+                                                <td><button ng-click="vm.destroyRelation($index, userhouserelation.id)" class= "btn btn-flat btn-danger  "><%= __('Delete') %></button></td>
                                             </tr>
                                             <tr class="ng-cloak">
                                                 <td><select ng-model="vm.newRelation.house" class="form-control" >
@@ -52,7 +52,7 @@
                                                         <option ng-repeat="userhouserelationtype in vm.userHouseRelationTypes" value="{{userhouserelationtype.id}}">{{userhouserelationtype.name}}</option>
                                                 </select>
                                                 </td>
-                                                <td><button class="btn btn-success  " ng-click="vm.addRelation()"><%= __('New') %></button></td>
+                                                <td><button class="btn btn-flat btn-success  " ng-click="vm.addRelation()"><%= __('New') %></button></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -81,7 +81,7 @@
                                             <tr ng-repeat="sleepin in vm.sleepIn" class="ng-cloak">
                                                 <td>{{sleepin.roomName}}</td>
                                                 <td>{{sleepin.userName}}</td>
-                                                <td><button ng-click="vm.destroySleepin($index, sleepin.roomId, sleepin.userId)" class= "btn btn-danger  "><%= __('Delete') %></button></td>
+                                                <td><button ng-click="vm.destroySleepin($index, sleepin.roomId, sleepin.userId)" class= "btn btn-flat btn-danger  "><%= __('Delete') %></button></td>
                                             </tr>
                                             <tr class="ng-cloak">
                                                 <td><select ng-model="vm.newSleepIn.room" class="form-control" >
@@ -93,7 +93,7 @@
                                                 </select>
                                                 </td>
                                                 
-                                                <td><button class="btn btn-success  " ng-click="vm.defineSleepIn()"><%= __('New') %></button></td>
+                                                <td><button class="btn btn-flat btn-success  " ng-click="vm.defineSleepIn()"><%= __('New') %></button></td>
                                             </tr>
                                         </tbody>
                                     </table>

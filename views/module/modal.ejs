@@ -46,11 +46,11 @@
                             </div>
                         </div>
                         <div class="download-module-button form-group">
-                           <button ng-show="!vm.selectedModule.installed" type="button" ng-click="vm.installModule(vm.selectedModule);" class="btn btn-success btn-lg btn-block">
+                           <button ng-show="!vm.selectedModule.installed" type="button" ng-click="vm.installModule(vm.selectedModule);" class="btn btn-flat btn-success btn-lg btn-block">
                                <div ng-show="!vm.installing"><%= __('module-install') %></div>
                                <div ng-show="vm.installing"><%= __('module-installing') %></div>
                            </button>
-                           <button ng-show="vm.selectedModule.installed" type="button" ng-click="vm.uninstallModule(null, vm.selectedModule.localId);" class="btn btn-danger btn-lg btn-block">
+                           <button ng-show="vm.selectedModule.installed" type="button" ng-click="vm.uninstallModule(null, vm.selectedModule.localId);" class="btn btn-flat btn-danger btn-lg btn-block">
                                <div ng-show="!vm.uninstalling"><%= __('module-uninstall') %></div>
                                <div ng-show="vm.uninstalling"><%= __('module-uninstalling') %></div>
                            </button>
