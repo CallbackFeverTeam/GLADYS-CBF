@@ -78,6 +78,7 @@ module.exports.policies = {
     create: true,
     destroy: ['checkToken']
   },
+  Skin : ['checkToken'],
   Socket : ['checkToken'],
   Speak : ['checkToken'],
   State : ['checkToken'],
@@ -89,6 +90,7 @@ module.exports.policies = {
     healthCheck: true
   },
   Timer: ['checkToken'],
+  TodoList : ['checkToken'],
   Token : ['checkToken'],
   Update: ['checkToken'],
   User : {
@@ -106,7 +108,6 @@ module.exports.policies = {
     installation: ['signupAllowed']
   },
   Weather : ['checkToken'],
-  Skin : ['checkToken'],
 
 
   /***************************************************************************

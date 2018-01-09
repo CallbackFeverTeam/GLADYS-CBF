@@ -18,6 +18,17 @@ module.exports = {
         })  
         .catch(next); 
     },
+
+    /**
+     * Get box by id
+     */
+    getById: function(req, res, next){
+        gladys.box.getById(req.params.id)
+         .then(function(box){
+             return res.json(box);
+         })  
+         .catch(next); 
+     },
     
     
     create: function(req, res, next){

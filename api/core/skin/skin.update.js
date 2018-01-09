@@ -3,7 +3,7 @@ var Promise = require('bluebird');
 module.exports = function update(skin) {
     var id = skin.id;
     delete skin.id;
-    return skin.update({
+    return Skin.update({
             id: id
         }, skin)
         .then(function(skins) {

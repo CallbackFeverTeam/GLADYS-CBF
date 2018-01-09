@@ -23,8 +23,8 @@
                 
              <!-- If there are no box on dashboard ! -->
              <% if(boxs.length === 0) { %>
-                    
-                 <div class="box box-info">
+
+                  <div class="box box-info">
                         
                         <div class="box-header">
                             <i class="fa fa-info"></i>
@@ -44,25 +44,19 @@
                 <% 
                    for(var i = 0; i < boxs.length; i++) { 
                         if(boxs[i].x == 1) {
-                %>                
-                                     
-                    <div class="box <%= boxs[i].type %>"  <% if(boxs[i].ngcontroller && boxs[i].ngcontroller.length > 0 ) { %> data-ng-controller="<%= boxs[i].ngcontroller %>" <% } %> ng-init="vm.init(<%= boxs[i].boxId %>);" >
+                %> 
+                    <div class="<%= boxs[i].type %>"  <% if(boxs[i].ngcontroller && boxs[i].ngcontroller.length > 0 ) { %> data-ng-controller="<%= boxs[i].ngcontroller %>" <% } %> ng-init="vm.init(<%= boxs[i].boxId %>);" >
 
-                        <div class="box-header">
-                            <i class="<%= boxs[i].icon %>"></i>
-                            <h3 class="box-title"><%= boxs[i].title %></h3>
-                            <!--<div class="box-tools pull-right">
-                                <button class="btn btn-default  " data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse"><i class="fa fa-minus"></i></button>
-                                <button class="btn btn-default  " data-widget="remove" data-toggle="tooltip" title="" ng-click="vm.remove(<%= boxs[i].id %>);" data-original-title="Remove"><i class="fa fa-times"></i></button>
-                            </div>-->
-                        </div><!-- /.box-header -->
+                        <%- boxs[i].header %>
+                        <!-- /.box-header -->
                         
-                        <div class="box-body"><%- boxs[i].html %></div>
+                        <%- boxs[i].body %>
                         <!-- /.box-body -->
                         
                         <% if(boxs[i].footer) { %>
-                             <div class="box-footer text-black"><%- boxs[i].footer %></div>
-                         <% } %>
+                            <%- boxs[i].footer %>
+                            <!-- /.box-footer -->
+                        <% } %>
                     </div><!-- /.box -->
                     
                <%
@@ -83,23 +77,17 @@
                 <% 
                    for(var i = 0; i < boxs.length; i++) { 
                         if(boxs[i].x == 2) {
-                %>                
-                                     
-                    <div class="box <%= boxs[i].type %>"  <% if(boxs[i].ngcontroller && boxs[i].ngcontroller.length > 0 ) { %> data-ng-controller="<%= boxs[i].ngcontroller %>" <% } %> ng-init="vm.init(<%= boxs[i].boxId %>);" >
-                        <div class="box-header">
-                            <i class="<%= boxs[i].icon %>"></i>
-                            <h3 class="box-title"><%= boxs[i].title %></h3>
-                            <!--<div class="box-tools pull-right">
-                                <button class="btn btn-default  " data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse"><i class="fa fa-minus"></i></button>
-                                <button class="btn btn-default  " data-widget="remove" data-toggle="tooltip" title="" data-original-title="Remove"><i class="fa fa-times"></i></button>
-                            </div>-->
-                        </div><!-- /.box-header -->
+                %> 
+                    <div class="<%= boxs[i].type %>"  <% if(boxs[i].ngcontroller && boxs[i].ngcontroller.length > 0 ) { %> data-ng-controller="<%= boxs[i].ngcontroller %>" <% } %> ng-init="vm.init(<%= boxs[i].boxId %>);" >
+
+                        <%- boxs[i].header %>
+                        <!-- /.box-header -->
                         
-                        <div class="box-body"><%- boxs[i].html %></div>
+                        <%- boxs[i].body %>
                         <!-- /.box-body -->
                         
-                         <% if(boxs[i].footer) { %>
-                             <div class="box-footer text-black"><%- boxs[i].footer %></div>
+                        <% if(boxs[i].footer) { %>
+                             <%- boxs[i].footer %>
                          <% } %>
                     </div><!-- /.box -->
                     

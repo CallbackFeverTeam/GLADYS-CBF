@@ -43,6 +43,7 @@ gladys.load = function load(cb) {
     gladys.scenario = require('./scenario/index.js');
     gladys.scheduler = require('./scheduler/index.js');
     gladys.script = require('./script/index.js');
+    gladys.skin = require('./skin/index.js');
     gladys.socket = require('./socket/index.js');
     gladys.state = require('./state/index.js');
     gladys.stateParam = require('./stateparam/index.js');
@@ -53,12 +54,12 @@ gladys.load = function load(cb) {
     gladys.system = require('./system/index.js');
     gladys.task = require('./task/index.js');
     gladys.time = require('./time/index.js');
+    gladys.todolist = require('./todolist/index.js')
     gladys.token = require('./token/index.js');
     gladys.update = require('./update/index.js');
     gladys.user = require('./user/index.js');
     gladys.utils = require('./utils/index.js');
     gladys.weather = require('./weather/index.js');
-    gladys.skin = require('./skin/index.js');
 
     // get Gladys version number
     try {

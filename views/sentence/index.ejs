@@ -13,7 +13,7 @@
                 </section>
                 <!-- Main content -->
                 <section class="content"  data-ng-controller="SentenceCtrl as vm">
-                     <div id="tab-color" class="nav-tabs-custom <%= req.session.Skin.tab%>">
+                     <div id="tab-color" class="nav-tabs-custom <%= Skin.tab%>">
             <ul class="nav nav-tabs">
               <li ng-class="vm.status === false && 'active'"><a style="cursor:pointer" ng-click="vm.setStatus(false)" aria-expanded="true"><%= __('sentence-all') %></a></li>
               <li ng-class="vm.status === 'pending' && 'active'"><a style="cursor:pointer" ng-click="vm.setStatus('pending')" aria-expanded="true"><%= __('sentence-pending') %></a></li>

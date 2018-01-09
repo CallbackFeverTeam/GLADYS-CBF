@@ -77,5 +77,5 @@ module.exports = {
         SELECT DISTINCT service FROM calendar;
     `,
 
-    getDraggableEventsByUser: 'SELECT * FROM calendardraggableevents WHERE user = ?;',
+    getDraggableEventsByUser: 'SELECT * FROM calendardraggableevents WHERE user = ? UNION SELECT * FROM calendardraggableevents WHERE user = 0;',
 };

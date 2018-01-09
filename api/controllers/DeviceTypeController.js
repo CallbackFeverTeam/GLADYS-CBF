@@ -141,6 +141,14 @@ module.exports = {
       gladys.deviceType.delete({id: req.params.id})
         .then(() => res.json({success: true}))
         .catch(next);
-  }
+  },
+
+  getParamsBox: function(req, res, next){
+    gladys.deviceType.getParamsBox(req.params.id)
+      .then(function(paramsBox){
+         return res.json(paramsBox); 
+      })
+      .catch(next);
+  },
   
 };

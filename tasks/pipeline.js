@@ -32,11 +32,10 @@ var cssFilesToInject = [
   'styles/nav-tabs-custom.css',
 
   //Inject AdminLTE files
-  'AdminLTE/bower_components/morris.js/morris.css',
   'AdminLTE/bower_components/jvectormap/jquery-jvectormap.css',
   'AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css',
   'AdminLTE/bower_components/bootstrap/dist/css/bootstrap.min.css',
-  'AdminLTE/dist/css/AdminLTE.min.css',
+  'AdminLTE/bower_components/select2/dist/css/select2.min.css',
   'AdminLTE/bower_components/bootstrap-daterangepicker/daterangepicker.css',
   'AdminLTE/bower_components/font-awesome/css/font-awesome.min.css',
   'AdminLTE/bower_components/Ionicons/css/ionicons.min.css',
@@ -49,7 +48,10 @@ var cssFilesToInject = [
   //'styles/**/*.css',
   
   // injecting hooks styles
-  'hooks/**/*.css'
+  'hooks/**/*.css',
+
+  //Inject AdminLTE at the end
+  'AdminLTE/dist/css/AdminLTE.min.css',
 ];
 
 
@@ -72,14 +74,11 @@ var jsFilesToInject = [
    // loading Raphael
   'AdminLTE/bower_components/raphael/raphael.min.js',
   
-  // loading Morris JS
-  'AdminLTE/bower_components/morris.js/morris.min.js',
-  
   // loading Moment with locales
   'AdminLTE/bower_components/moment/min/moment.min.js',
   
   // loading Chart JS
-  'AdminLTE/bower_components/chart.js/chart.min.js',
+  'AdminLTE/bower_components/chart.js/dist/chart.min.js',
   
   // loading ace
   'js/dependencies/ace/ace.js',
@@ -119,7 +118,7 @@ var jsFilesToInject = [
     'js/angular-moment/angular-moment.min.js',
     'js/angular-ui-notification/angular-ui-notification.min.js',
     'js/smooth-scroll/angular-smooth-scroll.min.js',
-    'js/angular-chart/angular-chart.min.js',
+    'js/angular-chart/dist/angular-chart.min.js',
     'js/angular-translate/angular-translate.min.js',
     'js/angular-slider/slider.js',
     'js/angular-device-detector/ng-device-detector.min.js',
@@ -138,9 +137,10 @@ var jsFilesToInject = [
    'hooks/**/*.js',
    
    // loading AdminLTE app
-   'AdminLTE/dist/js/adminlte.min.js',
+   'AdminLTE/bower_components/select2/dist/js/select2.full.min.js',
    'AdminLTE/bower_components/fullcalendar/dist/fullcalendar.min.js',
    'AdminLTE/bower_components/fullcalendar/dist/locale-all.js',
+   'AdminLTE/dist/js/adminlte.min.js',
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
   //'js/**/*.js'

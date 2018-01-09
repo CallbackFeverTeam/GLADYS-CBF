@@ -23,6 +23,10 @@ module.exports = {
           type: 'integer',
           required: true
       },
+
+      param: {
+          type: 'text'
+      },
       
       user: {
           model: 'User',

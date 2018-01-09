@@ -69,7 +69,9 @@ module.exports.routes = {
   
   // Box
   'get /box': 'BoxController.index',
+  'get /box/:id': 'BoxController.getById',
   'post /box': 'BoxController.create',
+  'patch /box/:id': 'BoxController.update',
   'delete /box/:id': 'BoxController.delete',
   
   //BoxType
@@ -120,6 +122,7 @@ module.exports.routes = {
   'patch /devicetype/:id': 'DeviceTypeController.update',
   'post /devicetype/:id/exec': 'DeviceTypeController.exec',
   'get /devicetype/:id': 'DeviceTypeController.getById',
+  'get /devicetype/box/:id': 'DeviceTypeController.getParamsBox',
 
   // Sentence
   'get /sentence': 'SentenceController.index',
@@ -259,7 +262,14 @@ module.exports.routes = {
   'post /system/shutdown': 'SystemController.shutdown',
   'post /system/update': 'SystemController.update',
   'get /system/health': 'SystemController.healthCheck',
-  
+
+  //TodoList
+  'get /todolist/task': 'TodoListController.getByUser',
+  'get /todolist/task/:id': 'TodoListController.getByUser',
+  'post /todolist/task': 'TodoListController.create',
+  'patch /todolist/task/:id': 'TodoListController.update',
+  'delete /todolist/task/:id': 'TodoListController.delete',
+
   // Token
   'get /token': 'TokenController.index',
   'post /token': 'TokenController.create',
