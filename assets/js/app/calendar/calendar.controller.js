@@ -26,7 +26,6 @@
     vm.allEvents = [];
     vm.draggableEvents = [];
     vm.calendarView = calendarView;
-    vm.loadEvents = loadEvents;
     vm.loadAllEvents = loadAllEvents;
     vm.loadDraggableEvents = loadDraggableEvents;
     vm.init_events = init_events;
@@ -122,8 +121,8 @@
             copiedEventObject.externalid      = data.data.externalid
             copiedEventObject.id              = data.data.id
             copiedEventObject.start           = eventDate
-            copiedEventObject.backgroundColor = $(this).css('background-color')
-            copiedEventObject.borderColor     = $(this).css('border-color')
+            copiedEventObject.backgroundColor = data.data.color
+            copiedEventObject.borderColor     = data.data.color
     
             $('#calendar').fullCalendar('renderEvent', copiedEventObject, true)
           })
@@ -190,7 +189,7 @@
         var val = $('#new-event').val()
         if (val.length == 0) {
           return
-    }
+        }
     
         var newEvent = {
           title: val,
@@ -247,13 +246,6 @@
         })
 
       })
-    }
-    
-    function loadEvents(date) {
-      return calendarService.loadEvents(date)
-        .then(function(data){
-          vm.dayEvents = data.data;
-        });
     }
 
     function loadAllEvents() {

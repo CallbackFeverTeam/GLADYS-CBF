@@ -23,11 +23,10 @@
     <link rel="stylesheet" href="/styles/disable-hyperlinks.css">
     <link rel="stylesheet" href="/styles/box.css">
     <link rel="stylesheet" href="/styles/nav-tabs-custom.css">
-    <link rel="stylesheet" href="/AdminLTE/bower_components/morris.js/morris.css">
     <link rel="stylesheet" href="/AdminLTE/bower_components/jvectormap/jquery-jvectormap.css">
     <link rel="stylesheet" href="/AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <link rel="stylesheet" href="/AdminLTE/bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/AdminLTE/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="/AdminLTE/bower_components/select2/dist/css/select2.min.css">
     <link rel="stylesheet" href="/AdminLTE/bower_components/bootstrap-daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="/AdminLTE/bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/AdminLTE/bower_components/Ionicons/css/ionicons.min.css">
@@ -35,6 +34,7 @@
     <link rel="stylesheet" href="/AdminLTE/bower_components/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="/AdminLTE/plugins/iCheck/minimal/_all.css">
     <link rel="stylesheet" href="/AdminLTE/bower_components/fullcalendar/dist/fullcalendar.min.css">
+    <link rel="stylesheet" href="/AdminLTE/dist/css/AdminLTE.min.css">
     <!--STYLES END-->
     
     <style>
@@ -45,7 +45,7 @@
     
   </head>
 
-  <body id="body" class="hold-transition sidebar-mini <%= req.session.Skin.body %>" ng-app="gladys"> 
+  <body id="body" class="hold-transition sidebar-mini <%= Skin.body %>" ng-app="gladys"> 
         <div class="wrapper">
                 <header class="main-header">
                         <a href="/dashboard" style="text-decoration:none" class="logo">
@@ -214,7 +214,7 @@
                     <%= __('Sources') %>  
                     <a class="fa fa-github-alt" style="text-decoration:none" href="https://github.com/GladysProject/Gladys" target="_blank"></a>
                     <%= __('Website') %>
-                    <a class="fa fa-link" style="text-decoration:none" href="http://gladysproject.com" target="_blank"></a>
+                    <a class="fa fa-link" style="text-decoration:none" href="https://gladysproject.com" target="_blank"></a>
                 </div>
                 Gladys <%= gladys.version %>  
         </footer>
@@ -253,9 +253,8 @@
     <script src="/AdminLTE/bower_components/jquery-ui/jquery-ui.min.js"></script>
     <script src="/AdminLTE/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/AdminLTE/bower_components/raphael/raphael.min.js"></script>
-    <script src="/AdminLTE/bower_components/morris.js/morris.min.js"></script>
     <script src="/AdminLTE/bower_components/moment/min/moment.min.js"></script>
-    <script src="/AdminLTE/bower_components/chart.js/chart.min.js"></script>
+    <script src="/AdminLTE/bower_components/chart.js/dist/chart.min.js"></script>
     <script src="/js/dependencies/ace/ace.js"></script>
     <script src="/AdminLTE/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
     <script src="/AdminLTE/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
@@ -272,7 +271,7 @@
     <script src="/js/angular-moment/angular-moment.min.js"></script>
     <script src="/js/angular-ui-notification/angular-ui-notification.min.js"></script>
     <script src="/js/smooth-scroll/angular-smooth-scroll.min.js"></script>
-    <script src="/js/angular-chart/angular-chart.min.js"></script>
+    <script src="/js/angular-chart/dist/angular-chart.min.js"></script>
     <script src="/js/angular-translate/angular-translate.min.js"></script>
     <script src="/js/angular-slider/slider.js"></script>
     <script src="/js/angular-device-detector/ng-device-detector.min.js"></script>
@@ -294,9 +293,11 @@
     <script src="/js/app/brain/brain.service.js"></script>
     <script src="/js/app/browser/browser.service.js"></script>
     <script src="/js/app/cache/cacheService.js"></script>
+    <script src="/js/app/calendar/calendar.box.controller.js"></script>
     <script src="/js/app/calendar/calendar.controller.js"></script>
     <script src="/js/app/calendar/calendar.service.js"></script>
     <script src="/js/app/category/category.service.js"></script>
+    <script src="/js/app/device/device.box.controller.js"></script>
     <script src="/js/app/device/device.controller.js"></script>
     <script src="/js/app/device/device.service.js"></script>
     <script src="/js/app/device/deviceState.controller.js"></script>
@@ -318,6 +319,7 @@
     <script src="/js/app/maps/maps.controller.js"></script>
     <script src="/js/app/message/message.controller.js"></script>
     <script src="/js/app/message/message.service.js"></script>
+    <script src="/js/app/mode/mode.box.controller.js"></script>
     <script src="/js/app/mode/mode.controller.js"></script>
     <script src="/js/app/mode/mode.service.js"></script>
     <script src="/js/app/module/module.controller.js"></script>
@@ -354,6 +356,8 @@
     <script src="/js/app/store/store.service.js"></script>
     <script src="/js/app/system/system.controller.js"></script>
     <script src="/js/app/system/system.service.js"></script>
+    <script src="/js/app/todolist/todolist.box.controler.js"></script>
+    <script src="/js/app/todolist/todolist.service.js"></script>
     <script src="/js/app/token/token.controller.js"></script>
     <script src="/js/app/token/token.service.js"></script>
     <script src="/js/app/translate/translate.config.js"></script>
@@ -363,9 +367,10 @@
     <script src="/js/app/voice/voice.service.js"></script>
     <script src="/js/app/weather/weather.controller.js"></script>
     <script src="/js/app/weather/weather.service.js"></script>
-    <script src="/AdminLTE/dist/js/adminlte.min.js"></script>
+    <script src="/AdminLTE/bower_components/select2/dist/js/select2.full.min.js"></script>
     <script src="/AdminLTE/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
     <script src="/AdminLTE/bower_components/fullcalendar/dist/locale-all.js"></script>
+    <script src="/AdminLTE/dist/js/adminlte.min.js"></script>
     <!--SCRIPTS END-->
     
 

@@ -1,7 +1,7 @@
 <div  data-ng-controller="HouseCtrl as vm">
      
 <!-- NEW BOX -->
-<div class="box skin-box <%= req.session.Skin.box%>">
+<div class="box skin-box <%= Skin.box%>">
     <div class="box-header with-border">
         <h3 class="box-title"><%= __('house-box-title') %></h3>
     </div>
@@ -59,7 +59,7 @@
 <!-- END OF HOUSE BOX -->
 
 <!-- NEW BOX -->
-<div class="box skin-box <%= req.session.Skin.box%>">
+<div class="box skin-box <%= Skin.box%>">
     <div class="box-header with-border">
         <h3 class="box-title"><%= __('room-box-title') %></h3>
     </div>

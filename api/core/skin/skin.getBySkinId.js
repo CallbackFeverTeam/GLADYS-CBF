@@ -3,16 +3,16 @@ var Promise = require('bluebird');
 
 module.exports = function(id) {
 
-    /**if (!options || !options.id) {
+    if (!id) {
         return Promise.reject(new Error('Wrong parameters'));
-    }*/
+    }
 
     return gladys.utils.sql(queries.getBySkinId, [id])
-        .then(function(skin) {
-            if (skin.length === 0) {
+        .then(function(skins) {
+            if (skins.length === 0) {
                 return Promise.reject(new Error('Skin not found'));
             }
 
-            return Promise.resolve(skin[0]);
+            return Promise.resolve(skins[0]);
         });
 };

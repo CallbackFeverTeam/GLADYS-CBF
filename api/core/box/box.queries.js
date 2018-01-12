@@ -9,5 +9,6 @@ module.exports = {
     JOIN boxtype ON (box.boxtype = boxtype.id)
     WHERE user = ?;
   `,
-  delete: 'DELETE FROM box WHERE id = ?;'  
+  delete: 'DELETE FROM box WHERE id = ?;',
+  getById: 'SELECT * FROM box WHERE id = ?;' 
 };

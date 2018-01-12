@@ -3,6 +3,7 @@ module.exports = {
     get: 'SELECT * FROM mode;',
     delete: 'DELETE FROM mode WHERE id = ?;',
     getByCode: 'SELECT * FROM mode WHERE code = ?',
+    getById: 'SELECT * FROM mode WHERE id = ?',
     getByHouse: `
         SELECT event.* FROM event 
         JOIN eventtype ON event.eventtype = eventtype.id

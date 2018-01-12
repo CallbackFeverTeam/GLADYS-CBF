@@ -14,7 +14,7 @@
 
                 <!-- Main content -->
                 <section class="content">
-                    <div class="box skin-box <%= req.session.Skin.box%>">
+                    <div class="box skin-box <%= Skin.box%>">
                          <div class="box-body table-responsive" data-ng-controller="AlarmCtrl as vm">
                                     
                                     <table id="example2" class="table table-bordered table-hover">
@@ -62,7 +62,7 @@
                                                             <!-- DateTime Boostrap Picker -->
 
                                                              <!-- NEW BOX -->
-                                                          <div class="box skin-box <%= req.session.Skin.box%>">
+                                                          <div class="box skin-box <%= Skin.box%>">
                                                           <div class="box-header with-border">
                                                             <h3 class="box-title"><%= __('Pick a date') %></h3>
                                                           </div>  
@@ -90,7 +90,7 @@
                                                             <!-- END OF BOX -->
                                                             
                                                              <!-- NEW BOX -->
-                                                          <div class="box skin-box <%= req.session.Skin.box%>">
+                                                          <div class="box skin-box <%= Skin.box%>">
                                                           <div class="box-header with-border">
                                                             <h3 class="box-title"><%= __('alarm-sleep-now') %></h3>
                                                           </div>  
@@ -116,7 +116,7 @@
                                                             <!-- END OF BOX -->
                                                          
                                                            <!-- NEW BOX -->
-                                                          <div class="box skin-box <%= req.session.Skin.box%>">
+                                                          <div class="box skin-box <%= Skin.box%>">
                                                           <div class="box-header with-border">
                                                             <h3 class="box-title"><%= __('Set a recurring alarm') %></h3>
                                                           </div>  
@@ -164,7 +164,7 @@
                                                           <!-- END OF BOX -->
 
                                                           <!-- NEW BOX -->
-                                                          <div class="box skin-box <%= req.session.Skin.box%>">
+                                                          <div class="box skin-box <%= Skin.box%>">
                                                           <div class="box-header with-border">
                                                             <h3 class="box-title"><%= __('alarm-cron-rule') %></h3>
                                                           </div>  
@@ -191,7 +191,7 @@
                                                           <!-- END OF BOX -->
 
                                                           <!-- NEW BOX -->
-                                                          <div class="box skin-box <%= req.session.Skin.box%>">
+                                                          <div class="box skin-box <%= Skin.box%>">
                                                           <div class="box-header with-border">
                                                             <h3 class="box-title"><%= __('alarm-auto-alarm') %></h3>
                                                           </div>  

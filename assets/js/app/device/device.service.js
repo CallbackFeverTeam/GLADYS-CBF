@@ -27,10 +27,12 @@
             createDeviceType: createDeviceType,
             getDeviceTypesDevice: getDeviceTypesDevice,
             getTypes: getTypes,
+            getTypesById: getTypesById,
             updateDeviceType: updateDeviceType,
             deleteDeviceType: deleteDeviceType,
             exec: exec,
-            getStates: getStates
+            getStates: getStates,
+            getBoxParams: getBoxParams
         };
 
         return service;
@@ -67,6 +69,10 @@
             return $http({method: 'GET', url: '/devicetype'});
         }
 
+        function getTypesById(id){
+            return $http({method: 'GET', url: '/devicetype/' + id});
+        }
+
         function createDeviceType(deviceType){
             return $http({method: 'POST', url: '/devicetype', data: deviceType});
         }
@@ -88,8 +94,13 @@
         }
         
         // all about deviceStates
-        function getStates(deviceType, skip){
-            return $http({method: 'GET', url: '/devicestate', params: {devicetype: deviceType, skip:skip}});
+        function getStates(deviceType, skip, take){
+            return $http({method: 'GET', url: '/devicestate', params: {devicetype: deviceType, skip:skip, take:take}});
+        }
+
+        // route for device box params
+        function getBoxParams(id){
+            return $http({method: 'GET', url: '/devicetype/box/' + id});
         }
     }
 })();
