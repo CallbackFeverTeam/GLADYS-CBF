@@ -477,5 +477,11 @@
   "Title": "Titre",
   "Create-event": "Créer un événement",
   "Events-available": "Evénements disponible",
-  "Drag-here-to-delete":"Glisser ici pour supprimer"
+  "Drag-here-to-delete":"Glisser ici pour supprimer",
+  "Approve": "Approuver",
+  "Reject": "Rejeter",
+  "official": "officielle",
+  "approved": "approuvée",
+  "pending": "en attente",
+  "rejected": "rejetée"
 }

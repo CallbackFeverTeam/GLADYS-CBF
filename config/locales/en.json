@@ -312,5 +312,11 @@
   "Title": "Title",
   "Create-event": "Create event",
   "Events-available": "Events available",
-  "Drag-here-to-delete":"Drag here to delete"
+  "Drag-here-to-delete":"Drag here to delete",
+  "Approve": "Approve",
+  "Reject": "Reject",
+  "official": "official",
+  "approved": "approved",
+  "pending": "pending",
+  "rejected": "rejected"
 }
