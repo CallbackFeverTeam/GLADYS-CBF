@@ -9,7 +9,10 @@ module.exports = function(user) {
             if(events === 'Not Found') return Promise.reject(new Error('Not Found'));
             
             return Promise.map(events, function(event){
-                return gladys.calendar.createDraggableEvents(event);
+                return gladys.calendar.createDraggableEvents(event)
+                .catch(function(err){
+                    return Promise.resolve(); 
+                 });
             });
         });
 };
