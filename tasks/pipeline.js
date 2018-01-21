@@ -78,7 +78,7 @@ var jsFilesToInject = [
   'AdminLTE/bower_components/moment/min/moment.min.js',
   
   // loading Chart JS
-  'AdminLTE/bower_components/Chart.js/dist/chart.min.js',
+  'AdminLTE/bower_components/chart.js/dist/Chart.min.js',
   
   // loading ace
   'js/dependencies/ace/ace.js',
