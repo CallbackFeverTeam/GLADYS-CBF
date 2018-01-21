@@ -289,7 +289,7 @@
   "parameters-boxs": "Box",
   "parameters-notification": "Notifications",
   "parameters-box-title": "Box",
-  "parameters-box-text": "Les boxs sont les widgets, sur la page d'accueil par exemple. X et Y correspondent à la position de la box sur la grille, x peut prendre comme valeur 0 ou 1. Par exemple: (x=1,y=1) place la box en haut à gauche.",
+  "parameters-box-text": "Les boxs sont les widgets, sur la page d'accueil par exemple. X et Y correspondent à la position de la box sur la grille, x peut prendre comme valeur 1 ou 2 (pour gauche ou droite). Par exemple: (x=1,y=1) place la box en haut à gauche.",
   "parameters-box-table-boxtype": "Type",
   "parameters-box-table-x": "x",
   "parameters-box-table-y": "y",
