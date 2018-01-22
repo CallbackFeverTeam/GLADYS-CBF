@@ -28,6 +28,7 @@ gladys.load = function load(cb) {
     gladys.launcher = require('./launcher/index.js');
     gladys.launcherParam = require('./launcherparam/index.js');
     gladys.location = require('./location/index.js');
+    gladys.log = require('./log/index.js');
     gladys.machine = require('./machine/index.js');
     gladys.message = require('./message/index.js');
     gladys.mode = require('./mode/index.js');

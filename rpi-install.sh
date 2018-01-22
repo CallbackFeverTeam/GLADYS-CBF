@@ -43,6 +43,7 @@ mysql -u root -proot -e "create database gladys"
 
 # Dependencies
 sudo apt-get install -y libasound2-dev
+sudo npm install -g log.io --user "root"
 
 # NPM global modules
 sudo npm install -g pm2

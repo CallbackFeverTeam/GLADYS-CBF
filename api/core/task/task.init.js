@@ -61,5 +61,5 @@ module.exports = function(cb){
   setInterval(function(){
     gladys.update.checkUpdate();
   }, sails.config.update.checkUpdateInterval);  
- 
+
 };

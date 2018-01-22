@@ -48,7 +48,8 @@
     "sails-util-mvcsloader": "^0.4.0",
     "serialization": "^0.2.0",
     "suncalc": "^1.8.0",
-    "uuid": "^3.1.0"
+    "uuid": "^3.1.0",
+    "log.io": "^0.3.4"
   },
   "devDependencies": {
     "grunt-apidoc": "^0.11.0",
