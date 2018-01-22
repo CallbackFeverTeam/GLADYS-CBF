@@ -30,6 +30,7 @@
         function activate() {
             get();
             getTypes();
+            boxView();
         }
         
         function get(){
@@ -60,6 +61,17 @@
               });
         }
         
+        function boxView(){
+
+            $('.connectedSortable').sortable({
+                placeholder         : 'sort-highlight',
+                connectWith         : '.connectedSortable',
+                handle              : '.box-sortable',
+                forcePlaceholderSize: true,
+                zIndex              : 999999
+            });
+            $('.connectedSortable .box-header .box-sortable').css('cursor', 'move');
+        }
        
     }
 })();

@@ -1,45 +1,55 @@
 <!-- NEW BOX -->
-<div class="box skin-box <%= Skin.box%>">
-<div class="box-header with-border">
-    <h3 class="box-title"><%= __('parameters-box-title') %></h3>
-</div>
-        
-        <div class="box-body table-responsive" data-ng-controller="BoxCtrl as vm">
-                    <p><%= __('parameters-box-text') %></p>
-                    <table id="example2" class="table table-bordered table-hover">
-                        
-                        <thead>
-                            <tr>
-                                <th><%= __('parameters-box-table-boxtype') %></th>
-                                <th><%= __('parameters-box-table-x') %></th>
-                                <th><%= __('parameters-box-table-y') %></th>
-                                <!--<th><%= __('parameters-box-table-active') %></th>-->
-                                <th><%= __('parameters-box-table-delete') %></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="box in vm.boxs" class="ng-cloak">
-                                <td>{{box.boxType.title}}</td>
-                                <td>{{box.x}}</td>
-                                <td>{{box.y}}</td>
-                                <!--<td><button ng-click="vm.switchStatus($index, token.id)"class="btn btn-flat {{ box.active && 'btn-success' || 'btn-danger' }}  ">{{box.active && 'On' || 'Off' }}</button></td>-->
-                                <td><button ng-click="vm.destroy($index, box.id);" class= "btn btn-flat btn-danger  "><%= __('Delete') %></button></td>
-                            </tr>
-                            <tr>
-                                <td><select name="selectBoxType" id="selectBoxType" class="form-control"
-                                                            ng-options="boxType.title for boxType in vm.boxTypes track by boxType.id"
-                                                            ng-model="vm.newBox.boxtype" >
-                                     </select>
-                                </select>
-                                </td>
-                                <td><input type="text" ng-model="vm.newBox.x"class="form-control" placeholder="x"/></td>
-                                <td><input type="text" ng-model="vm.newBox.y"class="form-control" placeholder="y"/></td>
-                                <!--<td><input type="text" disabled ng-model="vm.newBox.active"class="form-control" value="1" /></td>-->
-                                <td><button class="btn btn-flat btn-success  " ng-click="vm.create(vm.newBox)"><%= __('New') %></button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-
+<div class="row" data-ng-controller="BoxCtrl as vm">
+    <div class="col-md-10">
+        <div class="box skin-box <%= Skin.box%>">
+            <div class="box-header with-border">
+                <h3 class="box-title">Actives boxs</h3>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-7 connectedSortable">
+                    <div class="box-header">
+                        <div class="callout callout-danger box-sortable">
+                            <h4>Box 1</h4>
+                            <p>Box preview</p>
+                        </div>
+                    </div>
+                    <div class="box-header">
+                        <div class="callout callout-warning box-sortable">
+                            <h4>Box 3</h4>
+                            <p>Box preview</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 connectedSortable">
+                    <div class="box-header">
+                        <div class="callout callout-info box-sortable">
+                            <h4>Box 2</h4>
+                            <p>Box preview</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- END OF BOX -->
+    <div class="col-md-2">
+        <div class="box skin-box <%= Skin.box%>">
+            <div class="box-header">
+                <h3 class="box-title">Available boxs</h3>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12 connectedSortable">
+                    <div class="box-header" ng-repeat="boxType in vm.boxTypes track by boxType.id">
+                        <div class="callout callout-success box-sortable">
+                            <h4>{{boxType.title}}</h4>
+                            <p>Box preview</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END OF BOX -->
+    
