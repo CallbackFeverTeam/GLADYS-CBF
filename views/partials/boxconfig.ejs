@@ -1,55 +1,37 @@
 <!-- NEW BOX -->
 <div class="row" data-ng-controller="BoxCtrl as vm">
-    <div class="col-md-10">
+    <section class="col-md-10">
         <div class="box skin-box <%= Skin.box%>">
             <div class="box-header with-border">
-                <h3 class="box-title">Actives boxs</h3>
+                <h3 class="box-title">test</h3>
             </div>
-            <br>
-            <div class="row">
-                <div class="col-md-7 connectedSortable">
-                    <div class="box-header">
-                        <div class="callout callout-danger box-sortable">
-                            <h4>Box 1</h4>
-                            <p>Box preview</p>
-                        </div>
-                    </div>
-                    <div class="box-header">
-                        <div class="callout callout-warning box-sortable">
-                            <h4>Box 3</h4>
-                            <p>Box preview</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5 connectedSortable">
-                    <div class="box-header">
-                        <div class="callout callout-info box-sortable">
-                            <h4>Box 2</h4>
-                            <p>Box preview</p>
-                        </div>
-                    </div>
+            <div class="box-body">
+                <div class="row">
+                    <section class="col-md-7 connectedSortable"></section>
+                    <section class="col-md-5 connectedSortable"></section>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-md-2">
+    </section>
+    
+    <section class="col-md-2">
         <div class="box skin-box <%= Skin.box%>">
-            <div class="box-header">
-                <h3 class="box-title">Available boxs</h3>
+            <div class="box-header with-border">
+                <h3 class="box-title">test</h3>
             </div>
-            <br>
-            <div class="row">
+            <div class="box-body">
                 <div class="col-md-12 connectedSortable">
-                    <div class="box-header" ng-repeat="boxType in vm.boxTypes track by boxType.id">
+
+                    <div class="box-header" ng-repeat="boxType in vm.boxTypes track by boxType.id" style="cursor: move">
                         <div class="callout callout-success box-sortable">
                             <h4>{{boxType.title}}</h4>
                             <p>Box preview</p>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>
-<!-- END OF BOX -->
-    
+<!-- END OF BOX -->    

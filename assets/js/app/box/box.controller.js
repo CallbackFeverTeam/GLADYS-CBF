@@ -70,7 +70,6 @@
                 forcePlaceholderSize: true,
                 zIndex              : 999999
             });
-            $('.connectedSortable .box-header .box-sortable').css('cursor', 'move');
         }
        
     }
